@@ -2,15 +2,18 @@
   "sections": {
     "header": {
       "type": "header",
-      "settings": {}
+      "settings": {
+      }
     },
     "main": {
       "type": "main-collection",
-      "settings": {}
+      "settings": {
+      }
     },
     "footer": {
       "type": "footer",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
