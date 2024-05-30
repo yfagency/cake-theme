@@ -5,8 +5,8 @@
       "settings": {
       }
     },
-    "main": {
-      "type": "main-collection",
+    "homepage": {
+      "type": "homepage",
       "settings": {
       }
     },
@@ -18,7 +18,7 @@
   },
   "order": [
     "header",
-    "main",
+    "homepage",
     "footer"
   ]
 }

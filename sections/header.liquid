@@ -1,1 +1,56 @@
-<header>this is header lel</header>
+<style>
+  .header {
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    padding: 16px 0;
+  }
+
+  .header__container {
+    max-width: 1160px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .header_links {
+    display: flex;
+    justify-content: end;
+    gap: 24px;
+  }
+
+  .header__container img {
+    max-width: 72px;
+  }
+
+  .header {
+    text-transform: capitalize;
+  }
+
+  .header__container nav {
+    gap: 24px;
+    display: flex;
+    justify-content: center;
+  }
+</style>
+<header class="header">
+  <div class="header__container">
+    <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cake_logo.svg" />
+    <nav>
+      <a>about</a>
+      <a>cake make</a>
+      <a>cake shop</a>
+      <a>faq</a>
+      <a>contact</a>
+      <a>get a quote</a>
+    </nav>
+    <div class="header_links">
+      <a>log in</a>
+      <a>cart</a>
+      <a>JP</a>
+    </div>
+  </div>
+</header>
