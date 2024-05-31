@@ -177,22 +177,21 @@ h2 {
   line-height: 1;
   margin: 0;
   width: fit-content;
+  overflow: hidden;
 }
 
 .home__marquee1 div {
   display: flex;
   flex-shrink: 0;
-  border: 2px solid red;
+  text-transform: capitalize;
+  padding: 24px 0;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
-/* .home__marquee1 div:first-child {
-  transform: translateX(-100%);
+.home__marquee1 h3 {
+  margin: 0;
 }
-
-.home__marquee1 div:nth-child(2) {
-  border: 2px solid yellow;
-  transform: translateX(-100%);
-} */
 
 @keyframes marquee {
   from {
@@ -204,5 +203,90 @@ h2 {
 }
 
 .marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 30s linear infinite;
+}
+
+/* CAKE MAKE */
+.embla {
+  overflow: hidden;
+  color: #fff;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr 30vw;
+  align-items: center;
+}
+
+.embla__slide img {
+  width: 100%;
+}
+
+.home__cakeMake_container {
+  max-width: 1160px;
+  margin: 150px auto;
+}
+
+.home__cakeMake h3 {
+  font-size: 48px;
+  line-height: 1;
+  text-transform: capitalize;
+  margin: 24px 0;
+}
+
+.embla__slide a {
+  display: block;
+  background: #0038FF;
+  color: #fff;
+  padding: 16px 48px;
+  text-align: center;
+  border-radius: 100px;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 500;
+  max-width: fit-content;
+}
+
+.embla__slide a:nth-child(2) {
+  display: block;
+  background: transparent;
+  color: #fff;
+  padding: 14px 46px;
+  text-align: center;
+  border-radius: 100px;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 500;
+  max-width: fit-content;
+  border: 2px solid #fff;
+}
+
+.home__cakeMake_buttons {
+  display: flex;
+  gap: 24px;
+  margin-top: 72px;
+}
+
+.home__cakeMake h2 {
+  color: #fff;
+  font-size: 112px;
+  text-transform: capitalize;
+}
+
+.embla__slide > div:first-child {
+  padding-left: 150px;
+  position: relative;
+}
+
+.home__cakeMake_arrow {
+  position: absolute;
+  top: 40px;
+  max-width: 100px;
+  left: 0;
 }

@@ -37,3 +37,80 @@
       <h3>the cake team spirit&nbsp;-&nbsp;</h3>
     </div>
 </section>
+<section class="home__cakeMake">
+  <div class="home__cakeMake_container">
+    <h2>cake make</h2>
+    <div class="embla">
+  <div class="embla__viewport">
+    <div class="embla__container">
+      <div class="embla__slide">
+        <div>
+          <h3>custom design</h3>
+        <p>Begin your journey with a custom jersey that elevates your team's spirit. Fill out the form, and let us guide you through an inspiring design experience.</p>
+        <div class="home__cakeMake_buttons">
+          <a>get a quote</a>
+          <a>learn more</a>
+        </div>
+        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+        </div>
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/gypsy-cafe-jersey.png?v=1717123284" />
+        </div>
+      </div>
+      <div class="embla__slide">
+        <div>
+          <h3>produce uniqueness</h3>
+        <p>Collaborate with our design mavens to tailor your unique jersey. We're here to answer all your questions and ensure your team's essence is perfectly captured.</p>
+        <div class="home__cakeMake_buttons">
+          <a>get a quote</a>
+          <a>learn more</a>
+        </div>
+        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+        </div>
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-alkem.png?v=1717134419" />
+        </div>
+      </div>
+      <div class="embla__slide">
+        <div>
+          <h3>idea delivery</h3>
+        <p>Once your design dreams are realized, sit back and eagerly await the arrival of your team's new standout jersey.</p>
+        <div class="home__cakeMake_buttons">
+          <a>get a quote</a>
+          <a>learn more</a>
+        </div>
+        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+        </div>
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-squad.png?v=1717134470" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="embla__prev">Prev</button>
+  <button class="embla__next">Next</button>
+</div>
+  </div>
+  <script type="text/javascript">
+  const emblaNode = document.querySelector('.embla')
+  const options = { loop: false }
+  const emblaApi = EmblaCarousel(emblaNode, options)
+  console.log(emblaApi.slideNodes()) // Access API
+
+// Grab wrapper nodes
+const rootNode = document.querySelector('.embla')
+const viewportNode = rootNode.querySelector('.embla__viewport')
+
+// Grab button nodes
+const prevButtonNode = rootNode.querySelector('.embla__prev')
+const nextButtonNode = rootNode.querySelector('.embla__next')
+
+// Initialize the carousel
+const embla = EmblaCarousel(viewportNode)
+
+// Add click listeners
+prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+nextButtonNode.addEventListener('click', embla.scrollNext, false)
+
+</script>
+</section>
