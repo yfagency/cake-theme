@@ -1,1 +1,113 @@
-<footer>this is footer lel</footer>
+<style>
+  footer {
+    padding: 150px 0;
+  }
+
+  .footer__container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .footer__container_inner {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  .footer__container_inner > img {
+    max-width: 15%;
+  }
+
+  .footer__columns {
+    display: flex;
+    gap: 80px;
+  }
+
+  .footer__right > div {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  .footer__columns > div {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .footer__right_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .footer__right_bottom img {
+    height: 40px;
+    width: 40px;
+    object-fit: scale-down;
+  }
+
+  .footer__columns > div a:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .footer__right p {
+    text-align: right;
+    font-size: 14px;
+    line-height: 1;
+  }
+</style>
+<footer>
+  <div class="footer__container">
+    <div class="footer__container_inner">
+      <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cake_logo.svg" />
+      <div class="footer__right">
+        <div>
+          <div class="footer__columns">
+          <div>
+            <h3>Cakemake</h3>
+            <a>Cake studio</a>
+            <a>Clients works</a>
+            <a>FAQ</a>
+          </div>
+          <div>
+            <h3>Cakeshop</h3>
+            <a>Catalogue</a>
+            <a>Popular</a>
+          </div>
+          <div>
+            <h3>About</h3>
+            <a>Our story</a>
+            <a>Blog</a>
+            <a>Reviews</a>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <a>2 Chome-33-1 #401, Yoyogi,<br>Shibuya-ku, Tōkyō-to〒151-0053,<br>Japan</a>
+            <a>email@cake.come</a>
+          </div>
+        </div>
+        <div class="footer__right_bottom">
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/ri_visa-line.svg?v=1717381099" />
+            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/logos_mastercard.svg?v=1717381099" />
+            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/fontisto_american-express.svg?v=1717381099" />
+            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/logos_paypal.svg?v=1717381099" />
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/bxl_facebook.svg?v=1717381227" />
+            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/simple-icons_x.svg?v=1717381227" />
+            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/iconoir_instagram.svg?v=1717381228" />
+            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/mdi_youtube.svg?v=1717381227" />
+          </div>
+        </div>
+        </div>
+        <p><span id="currentYear"></span>. The Cake Team Spirit.</p>
+        <script>
+          const currentYear = new Date().getFullYear();
+          document.getElementById('currentYear').textContent = currentYear;
+        </script>
+      </div>
+    </div>
+  </div>
+</footer>
