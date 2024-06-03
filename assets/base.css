@@ -5,6 +5,7 @@ body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
   color: #fff;
+  overflow-x: hidden;
 }
 
 p {
@@ -167,9 +168,6 @@ h2 {
 }
 
 /* MARQUEE 1 */
-/* .home__marquee1 {
-  overflow: hidden;
-} */
 
 .home__marquee1 {
   color: #fff;
