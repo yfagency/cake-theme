@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: radial-gradient(165.75% 70.71% at 50% 50%, #363535 0%, #000 100%);
   padding: 0;
@@ -217,12 +221,13 @@ h2 {
   flex: 0 0 100%;
   min-width: 0;
   display: grid;
-  grid-template-columns: 1fr 30vw;
+  grid-template-columns: 1fr auto;
   align-items: center;
 }
 
-.embla__slide img {
-  width: 100%;
+.home__cakeMake_jersey {
+  position: relative;
+  width: 500px;
 }
 
 .home__cakeMake_container {

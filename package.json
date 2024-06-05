@@ -1,0 +1,11 @@
+{
+  "name": "cake-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "shopify theme dev --store=madebycake-2"
+  },
+  "author": "",
+  "license": "ISC"
+}
