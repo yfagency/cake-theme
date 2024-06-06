@@ -386,12 +386,16 @@ h2 {
 
 .home__testimonials_blueLine {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: -20%;
+  right: 0;
   z-index: -1;
 }
 
 /* TEAM COLLECTION */
+.home__teamCollection {
+  position: relative;
+}
+
 .home__teamCollection_container {
   max-width: 1160px;
   margin: 150px auto;
@@ -438,4 +442,10 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.home__teamCollection_line {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
 }
