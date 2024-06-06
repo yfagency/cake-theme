@@ -295,6 +295,12 @@ h2 {
   left: 0;
 }
 
+.home__cakeMake_emblaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
 /* TESTIMONIALS */
 .home__testimonials_container {
   max-width: 1160px;
