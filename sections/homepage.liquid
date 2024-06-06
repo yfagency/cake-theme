@@ -138,6 +138,39 @@
   
 </section>
 
+<section class="home__teamCollection">
+  <div class="home__teamCollection_container">
+    <h2>Team Collection</h2>
+    <div>
+      <!-- Collections Template (e.g., collections.liquid or a custom section) -->
+
+{% assign selected_collection_names = "Allkem,Gypsy Cafe x Chapter 2,Anabia,SQUAD,EQUITY" | split: "," %}
+
+<div class="home__teamCollection_grid">
+  {% for collection in collections %}
+    {% if selected_collection_names contains collection.title %}
+      <div class="home__teamCollection_item">
+        <a href="{{ collection.url }}">
+          {% if collection.image %}
+            <img src="{{ collection.image.src | img_url: 'large' }}" alt="{{ collection.title }}">
+          {% else %}
+            <img src="https://via.placeholder.com/300" alt="{{ collection.title }}">
+          {% endif %}
+          <h3>{{ collection.title }}</h3>
+          <p>{{ collection.description | truncate: 150 }}</p>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="home__teamCollection_cta">
+    <a>Create<br>your own</a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
 <section class="home__testimonials">
   <div class="home__testimonials_container">
     <h2>Shoutout from</h2>

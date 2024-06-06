@@ -390,3 +390,52 @@ h2 {
   left: 0;
   z-index: -1;
 }
+
+/* TEAM COLLECTION */
+.home__teamCollection_container {
+  max-width: 1160px;
+  margin: 150px auto;
+}
+
+.home__teamCollection_grid {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.home__teamCollection_grid a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.home__teamCollection_grid img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.home__teamCollection_item h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.home__teamCollection_cta {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+.home__teamCollection_cta a {
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+  background: #0038FF;
+  line-height: 1;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
