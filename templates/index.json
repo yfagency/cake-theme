@@ -14,11 +14,32 @@
       "type": "footer",
       "settings": {
       }
+    },
+    "1717735005e01777b5": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_V99thA": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_V99thA"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "header",
     "homepage",
+    "1717735005e01777b5",
     "footer"
   ]
 }

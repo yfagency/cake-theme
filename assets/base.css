@@ -449,3 +449,26 @@ h2 {
   bottom: 0;
   z-index: -1;
 }
+
+/* INSTA FEED */
+.instafeed-new-layout-wrapper {
+  gap: 8px !important;
+}
+
+.instafeed-new-layout-container {
+  max-width: 1160px;
+  padding: 150px 0;
+  margin: 0 auto;
+}
+
+.instafeed-new-layout-item {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.instafeed-new-layout-item img {
+  object-fit: cover !important;
+  height: 100% !important;
+  aspect-ratio: 1/1;
+  position: relative !important;
+}
