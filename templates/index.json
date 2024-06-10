@@ -10,11 +10,6 @@
       "settings": {
       }
     },
-    "footer": {
-      "type": "footer",
-      "settings": {
-      }
-    },
     "1717735005e01777b5": {
       "type": "apps",
       "blocks": {
@@ -32,7 +27,11 @@
         "instafeed_app_block_V99thA"
       ],
       "settings": {
-        "include_margins": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
       }
     }
   },
