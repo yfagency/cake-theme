@@ -13,12 +13,6 @@
     "1717735005e01777b5": {
       "type": "apps",
       "blocks": {
-        "powerful_form_builder_app_block_epJC49": {
-          "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-block\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
-          "settings": {
-            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"NDM3MjY=\"><\/div>"
-          }
-        },
         "instafeed_app_block_V99thA": {
           "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
@@ -30,7 +24,6 @@
         }
       },
       "block_order": [
-        "powerful_form_builder_app_block_epJC49",
         "instafeed_app_block_V99thA"
       ],
       "settings": {
