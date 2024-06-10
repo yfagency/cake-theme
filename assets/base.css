@@ -71,7 +71,7 @@ h2 {
 }
 
 .hero__container p {
-  max-width: 50%;
+  max-width: 40%;
 }
 
 .hero__jersey {
@@ -122,6 +122,23 @@ h2 {
 
 .rotating {
   animation: rotating 30s linear infinite;
+}
+
+.home__hero_socialMedia {
+  position: absolute;
+  bottom: 0;
+}
+
+.home__hero_socialMedia img {
+  height: 40px;
+  width: 40px;
+  object-fit: scale-down;
+}
+
+.home__hero_socialMedia {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /* ABOUT US */
@@ -236,7 +253,7 @@ h2 {
 }
 
 .home__cakeMake h3 {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1;
   text-transform: capitalize;
   margin: 24px 0;
@@ -299,6 +316,12 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 16px;
+}
+
+.embla__slide_textCircle {
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 
 /* TESTIMONIALS */
@@ -448,6 +471,78 @@ h2 {
   position: absolute;
   bottom: 0;
   z-index: -1;
+}
+
+/* CAKE ORIGINALS */
+.home__cakeOriginals_container {
+  max-width: 1160px;
+  margin: 150px auto;
+}
+
+.home__cakeOriginals_headingsBox h2 {
+  text-transform: capitalize;
+}
+
+.home__cakeOriginals p {
+  margin: 0;
+}
+
+.home__cakeOriginals_headingsBox h2:nth-child(2) {
+  padding-left: 10%;
+}
+
+.home__cakeOriginals_contentBox {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+}
+
+.home__cakeOriginals_contentBox img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+}
+
+.home__cakeOriginals_contentBox .swiper {
+  min-width: auto;
+}
+
+.home__cakeOriginals video {
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.home__cakeOriginals_cta {
+  font-size: 24px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.home__cakeOriginals_cta {
+  width: 250px;
+  display: block;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 100%;
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+}
+
+.home__cakeOriginals_cta img {
+  width: 20px;
+  margin-left: 8px;
+}
+
+.home__cakeOriginals_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* INSTA FEED */
