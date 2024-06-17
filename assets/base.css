@@ -57,6 +57,11 @@ h2 {
   font-weight: 500;
 }
 
+.hero__buttons a:nth-child(2) {
+  background: #0038FF;
+  color: #fff;
+}
+
 .hero__container {
   max-width: 1160px;
   margin: 0 auto;
