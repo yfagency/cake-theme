@@ -4,6 +4,9 @@
     position: fixed;
     width: 100%;
     padding: 16px 0;
+    z-index: 9999;
+    background: transparent;
+    transition: .3s;
   }
 
   .header__container {
@@ -24,6 +27,7 @@
 
   .header__container img {
     max-width: 72px;
+    transition: .3s;
   }
 
   .header {
@@ -35,8 +39,18 @@
     display: flex;
     justify-content: center;
   }
+
+  .headerScrolled {
+    background: #0038FF;
+    transition: .3s;
+  }
+
+  .headerScrolled img {
+    max-width: 48px;
+    transition: .3s;
+  }
 </style>
-<header class="header">
+<header id="header" class="header">
   <div class="header__container">
     <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cake_logo.svg" />
     <nav>
@@ -54,3 +68,13 @@
     </div>
   </div>
 </header>
+
+<script>
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 104) {
+      document.getElementById("header").classList.add("headerScrolled");
+    } else {
+      document.getElementById("header").classList.remove("headerScrolled");
+    }
+  });
+</script>
