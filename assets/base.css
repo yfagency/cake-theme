@@ -33,6 +33,9 @@ h2 {
 /* HERO */
 .home__hero {
   color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .home__hero h1 {
@@ -64,8 +67,9 @@ h2 {
 
 .hero__container {
   max-width: 1160px;
+  width: 100%;
+  min-height: 500px;
   margin: 0 auto;
-  min-height: 900px;
   display: flex;
   align-items: center;
   position: relative;
@@ -75,15 +79,20 @@ h2 {
   z-index: 2;
 }
 
+.hero__container div:nth-child(2) {
+  align-items: center;
+  display: flex;
+}
+
 .hero__container p {
   max-width: 40%;
 }
 
 .hero__jersey {
   position: absolute;
-  max-width: 700px;
   right: 0;
-  bottom: 0;
+  height: 125%;
+  max-height: 700px;
   z-index: 0;
 }
 
@@ -132,6 +141,7 @@ h2 {
 .home__hero_socialMedia {
   position: absolute;
   bottom: 0;
+  right: 0;
 }
 
 .home__hero_socialMedia img {
