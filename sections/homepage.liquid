@@ -9,7 +9,9 @@
       </div>
     </div>
     <div>
-      <img class="hero__jersey floating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/hero-jersey.png?v=1717049813" />
+      
+      {% assign hero__jersey_url = images['hero-jersey.png'] | image_url: width: 700 %}
+      <img data-src="{{ hero__jersey_url }}" alt="Potion Header" class="lazyload hero__jersey floating">
       <img class="hero__circleText_2 rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/hero-circle-text.svg" />
       <div class="home__hero_socialMedia">
         <a href=""><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/bxl_facebook.svg?v=1717381227" /></a>
@@ -51,6 +53,11 @@
 }
 </style>
 <!-- Slider main container -->
+
+{% assign home__cakeMake_gypsyJersey_url = images['gypsy-cafe-jersey.png'] | image_url: width: 700 %}
+{% assign home__cakeMake_alkemJersey_url = images['jersey-alkem.png'] | image_url: width: 700 %}
+{% assign home__cakeMake_squadJersey_url = images['jersey-squad.png'] | image_url: width: 700 %}
+
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
@@ -59,7 +66,7 @@
       <div class="embla__slide">
         <div>
           <h3>Tailored Designs</h3>
-        <p>Bold, vibrant, and uniquely yours — our designs capture your team’s essence.</p>
+        <p>Bold, vibrant, and uniquely yours — our designs capture your team's essence.</p>
         <div class="home__cakeMake_buttons">
           <a href="#home__contact">get a quote</a>
           <a>learn more</a>
@@ -68,7 +75,7 @@
         </div>
         <div class="embla__slide_imgBox">
           <img class="embla__slide_textCircle rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/click-to-know_circle.svg?v=1717983903" />
-          <img class="home__cakeMake_jersey" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/gypsy-cafe-jersey.png?v=1717123284" />
+          <img src="{{ home__cakeMake_gypsyJersey_url }}" alt="Gypsy Jersey" class="home__cakeMake_jersey">
         </div>
       </div>
     </div>
@@ -85,7 +92,7 @@
         </div>
         <div class="embla__slide_imgBox">
           <img class="embla__slide_textCircle rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/click-to-know_circle.svg?v=1717983903" />
-          <img class="home__cakeMake_jersey" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-alkem.png?v=1717134419" />
+          <img src="{{ home__cakeMake_alkemJersey_url }}" alt="Alkem Jersey" class="home__cakeMake_jersey" />
         </div>
       </div>
     </div>
@@ -102,7 +109,7 @@
         </div>
         <div class="embla__slide_imgBox">
           <img class="embla__slide_textCircle rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/click-to-know_circle.svg?v=1717983903" />
-          <img class="home__cakeMake_jersey" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-squad.png?v=1717134470" />
+          <img src="{{ home__cakeMake_squadJersey_url }}" alt="Squad Jersey" class="home__cakeMake_jersey" />
         </div>
       </div>
     </div>
@@ -160,7 +167,7 @@
       <div class="home__teamCollection_item">
         <a href="{{ collection.url }}">
           {% if collection.image %}
-            <img src="{{ collection.image.src | img_url: 'large' }}" alt="{{ collection.title }}">
+            <img src="{{ collection.image.src | img_url: '400x' }}" alt="{{ collection.title }}">
           {% else %}
             <img src="https://via.placeholder.com/300" alt="{{ collection.title }}">
           {% endif %}
@@ -180,12 +187,14 @@
   <img class="home__teamCollection_line" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/team_collection_line.svg?v=1717661780"/>
 </section>
 
+{% assign home__testimonials_img1_url = images['b7646d6f3df338c08debe74099700cae.jpg'] | image_url: width: 700 %}
+
 <section class="home__testimonials">
   <div class="home__testimonials_container">
     <h2>Shoutout from</h2>
     <h2>the Teams</h2>
     <div class="home__testimonials_topRow">
-      <img class="home__testimonials_img1" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/b7646d6f3df338c08debe74099700cae.jpg?v=1717135984" />
+      <img class="home__testimonials_img1" src="{{ home__testimonials_img1_url }}" />
       <h3>Team<br/>Anabia</h3>
     </div>
     <div class="home__testimonials_bottomRow">
@@ -220,6 +229,14 @@
     </div>
 </section>
 
+{% assign home__cakeOriginals_img1_url = images['cf1cb3453fef5a1ffff1b14d5ab4348a.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img2_url = images['5ff1685a152e3c0db4a14dcdac5f6a5a.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img3_url = images['eaf2526a9f532daf15400ffc31963203.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img4_url = images['1cb10ee2f142d058ffa748728b331bee.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img5_url = images['7f17acc81d0a5394c2f49f850b66d8d7.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img6_url = images['45d82a84a5fda90d7300b7cd89f1bb31.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img7_url = images['a21d351d51f1aebdc309525b0e1e2d1d.jpg'] | image_url: width: 700 %}
+
 <section class="home__cakeOriginals">
   <style>
     .home__cakeOriginals .swiper {
@@ -238,25 +255,25 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide">
-          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cf1cb3453fef5a1ffff1b14d5ab4348a.jpg" />
+          <img src="{{ home__cakeOriginals_img1_url }}" />
         </div>
         <div class="swiper-slide">
-          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/5ff1685a152e3c0db4a14dcdac5f6a5a.jpg" />
+          <img src="{{ home__cakeOriginals_img2_url }}" />
         </div>
         <div class="swiper-slide">
-          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/eaf2526a9f532daf15400ffc31963203.jpg" />
+          <img src="{{ home__cakeOriginals_img3_url }}" />
         </div>
         <div class="swiper-slide">
-          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/1cb10ee2f142d058ffa748728b331bee.jpg" />
+          <img src="{{ home__cakeOriginals_img4_url }}" />
         </div>
         <div class="swiper-slide">
-          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/7f17acc81d0a5394c2f49f850b66d8d7.jpg" />
+          <img src="{{ home__cakeOriginals_img5_url }}" />
         </div>
         <div class="swiper-slide">
-          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/45d82a84a5fda90d7300b7cd89f1bb31.jpg" />
+          <img src="{{ home__cakeOriginals_img6_url }}" />
         </div>
         <div class="swiper-slide">
-          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/a21d351d51f1aebdc309525b0e1e2d1d.jpg" />
+          <img src="{{ home__cakeOriginals_img7_url }}" />
         </div>
         <div class="swiper-slide">
           <video width="100%" height="100%" type="video/mp4" autoplay muted src="https://cdn.shopify.com/videos/c/o/v/bb289782f8fa46289ccccdf778bb4e55.mp4" />
