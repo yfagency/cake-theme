@@ -697,10 +697,16 @@ h2 {
 
   .hero__jersey {
     position: relative;
+    max-width: 200px;
+  }
+
+  .home__hero h1 {
+    font-size: 48px;
   }
 
   .home__hero p {
     max-width: 100%;
+    font-size: 16px;
   }
 
   .home__hero_socialMedia {
@@ -716,6 +722,10 @@ h2 {
     padding: 20px;
   }
 
+  .home__aboutUs h2 {
+    font-size: 48px;
+  }
+
   .home__aboutUs h2,
   .home__aboutUs p {
     padding: 0 !important;
@@ -726,9 +736,17 @@ h2 {
     width: 100%;
   }
 
+  .home__cakeMake h2 {
+    font-size: 48px;
+  }
+
   .home__cakeMake .embla__slide {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .home__cakeMake .swiper-slide {
+    width: 100% !important;
   }
 
   .home__cakeMake_container {
@@ -740,8 +758,22 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
 
+  .home__teamCollection h2 {
+    font-size: 48px;
+  }
+
   .home__teamCollection_container {
     padding: 20px;
+  }
+
+  /* TESTIMONIALS */
+  .home__testimonials h2 {
+    font-size: 40px;
+  }
+
+  /* CAKE ORIGINALS */
+  .home__cakeOriginals h2 {
+    font-size: 40px;
   }
 
   /* INSTA FEED */
