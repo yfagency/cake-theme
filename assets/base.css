@@ -697,7 +697,7 @@ h2 {
 
   .hero__jersey {
     position: relative;
-    max-width: 200px;
+    max-width: 100%;
   }
 
   .home__hero h1 {
@@ -706,7 +706,7 @@ h2 {
 
   .home__hero p {
     max-width: 100%;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .home__hero_socialMedia {
@@ -731,6 +731,14 @@ h2 {
     padding: 0 !important;
   }
 
+  .home__aboutUs p {
+    font-size: 20px;
+  }
+
+  .home__aboutUs a {
+    margin-left: 0;
+  }
+
   /* CAKE MAKE */
   .home__cakeMake .swiper {
     width: 100%;
@@ -738,6 +746,7 @@ h2 {
 
   .home__cakeMake h2 {
     font-size: 48px;
+    padding: 0 20px;
   }
 
   .home__cakeMake .embla__slide {
@@ -747,15 +756,44 @@ h2 {
 
   .home__cakeMake .swiper-slide {
     width: 100% !important;
+    height: auto;
+    align-self: stretch;
+    box-sizing: border-box;
+    padding: 20px;
   }
 
   .home__cakeMake_container {
-    padding: 20px;
+    margin: 50px auto;
+  }
+
+  .home__cakeMake_jersey {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .home__cakeMake .embla__slide div:first-child {
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .home__cakeMake_arrow {
+    display: none;
+  }
+
+  .swiper-pagination {
+    margin-bottom: -30px;
+    position: relative;
+    z-index: 100;
+  }
+
+  .swiper {
+    overflow: visible !important;
   }
 
   /* TEAM COLLECTION */
   .home__teamCollection_grid {
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   .home__teamCollection h2 {
@@ -764,16 +802,141 @@ h2 {
 
   .home__teamCollection_container {
     padding: 20px;
+    margin: 50px auto;
+  }
+
+  .home__teamCollection_item {
+    box-sizing: border-box;
+  }
+
+  .home__teamCollection_grid > div {
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .home__teamCollection_cta {
+    aspect-ratio: 1/1;
+  }
+
+  .home__teamCollection_cta a {
+    border-radius: 8px;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0;
   }
 
   /* TESTIMONIALS */
+  .home__testimonials {
+    padding-bottom: 50px;
+  }
+
+  .home__testimonials_container {
+    padding: 20px;
+  }
+
   .home__testimonials h2 {
-    font-size: 40px;
+    font-size: 48px;
+    padding-left: 0 !important;
+    line-height: 1;
+  }
+
+  .home__testimonials_topRow {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+
+  .home__testimonials_topRow img {
+    width: 100%;
+    margin-bottom: -5%;
+    margin-left: 10%;
+  }
+  
+  .home__testimonials_bottomRow div:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home__testimonials_bottomRow div:first-child img {
+    padding: 0;
+    width: 100%;
+    margin-left: -10%;
+  }
+
+  .home__testimonials_bottomRow div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
   }
 
   /* CAKE ORIGINALS */
+  .home__cakeOriginals {
+    padding: 50px 0;
+  }
+
   .home__cakeOriginals h2 {
     font-size: 40px;
+  }
+
+  .home__cakeOriginals .swiper {
+    width: 100%;
+  }
+
+  .home__cakeOriginals .swiper-slide {
+    height: auto;
+    align-self: stretch;
+  }
+
+  .home__cakeOriginals_contentBox img {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .home__cakeOriginals_headingsBox {
+    padding: 0 20px;
+  }
+
+  .home__cakeOriginals h2 {
+    padding-left: 0 !important;
+    font-size: 48px;
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  /* CONTACT */
+  .home__contact {
+    border: none;
+    padding: 50px 0;
+  }
+
+  .home__contact_inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home__contact_inner > div {
+    width: 100%;
+  }
+
+  .home__contact_inner h2 {
+    font-size: 72px;
+    line-height: 1;
+  }
+
+  .home__contact_container {
+    padding: 20px;
+  }
+
+  .home__contact_circleText {
+    top: 24%;
+    z-index: -1;
+  }
+
+  .home__contact_inner iframe {
+    backdrop-filter: blur(8px);
   }
 
   /* INSTA FEED */
@@ -785,5 +948,23 @@ h2 {
 
   .home__instafeed_container {
     padding: 20px;
+  }
+
+  .home__instafeed_top {
+    margin-top: 50px;
+  }
+
+  .home__instafeed_top img {
+    display: none;
+  }
+
+  .home__instafeed_top h3 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .instafeed-new-layout-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
   }
 }
