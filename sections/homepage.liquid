@@ -4,8 +4,8 @@
       <h1>the Cake<br>team Spirit</h1>
       <p>Custom cycling apparel that combines bold design, superior craftsmanship, and a love for community.</p>
       <div class="hero__buttons">
-        <a href="#home__contact">Make Jersey</a>
-        <a>Learn More</a>
+        {% include 'button', href: "#home__contact", btn_class: 'primary', btn_text: 'Make Jersey' %}
+        {% include 'button', href: "#home__contact", btn_class: 'secondary', btn_text: 'Learn More' %}
       </div>
     </div>
     <div>
@@ -24,10 +24,12 @@
 </section>
 <section class="home__aboutUs">
   <div class="aboutUs__container">
-    <h2>we are canvas</h2>
-    <h2>for your story</h2>
+    <div>
+      <h2>we are canvas</h2>
+      <h2>for your story</h2>
+    </div>
     <p>At Cake Make, we celebrate the spirit of unity and the thrill of the ride. Our custom-made cycling wear is crafted to reflect your team's unique passion and drive, helping you make a bold statement on every ride.</p>
-    <a>learn more</a>
+    {% include 'button', btn_class: 'primary', btn_text: 'Learn More' %}
   </div>
   <img class="aboutUs__blueLine" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/aboutUs-blue-line.svg?v=1717052993"/>
 </section>
@@ -68,8 +70,8 @@
           <h3>Tailored Designs</h3>
         <p>Bold, vibrant, and uniquely yours — our designs capture your team's essence.</p>
         <div class="home__cakeMake_buttons">
-          <a href="#home__contact">get a quote</a>
-          <a>learn more</a>
+          {% include 'button', btn_class: 'primary', btn_text: 'Get A Quote' %}
+          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
         </div>
         <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
         </div>
@@ -85,8 +87,8 @@
           <h3>Superior Craftsmanship</h3>
         <p>High-performance materials ensure comfort and durability on every ride.</p>
         <div class="home__cakeMake_buttons">
-          <a href="#home__contact">get a quote</a>
-          <a>learn more</a>
+          {% include 'button', btn_class: 'primary', btn_text: 'Get A Quote' %}
+          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
         </div>
         <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
         </div>
@@ -102,8 +104,8 @@
           <h3>Full Customization</h3>
         <p>From concept to creation, we bring your vision to life with meticulous attention to detail.</p>
         <div class="home__cakeMake_buttons">
-          <a href="#home__contact">get a quote</a>
-          <a>learn more</a>
+          {% include 'button', btn_class: 'primary', btn_text: 'Get A Quote' %}
+          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
         </div>
         <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
         </div>
@@ -347,7 +349,7 @@
           <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cake_logo_round_black.svg?v=1717743012" />
           <h3>cake.teamspirit</h3>
         </div>
-        <a>follow</a>
+        {% include 'button', btn_class: 'primary', btn_text: 'Follow' %}
       </div>
   </div>
 </section>
