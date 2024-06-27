@@ -33,11 +33,35 @@
       "type": "footer",
       "settings": {
       }
+    },
+    "contact-cta": {
+      "type": "contact-cta"
+    },
+    "instafeed-top": {
+      "type": "instafeed-top"
+    },
+    "contact-us": {
+      "type": "contact-us"
+    },
+    "cake-originals": {
+      "type": "cake-originals"
+    },
+    "marquee": {
+      "type": "marquee"
+    },
+    "testimonials": {
+      "type": "testimonials"
     }
   },
   "order": [
     "header",
     "homepage",
+    "testimonials",
+    "contact-cta",
+    "marquee",
+    "cake-originals",
+    "contact-us",
+    "instafeed-top",
     "1717735005e01777b5",
     "footer"
   ]

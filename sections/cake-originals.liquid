@@ -1,0 +1,204 @@
+<style>
+  .home__cakeOriginals {
+    padding: 150px 0;
+  }
+
+  .home__cakeOriginals_container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .home__cakeOriginals_headingsBox h2 {
+    text-transform: capitalize;
+  }
+
+  .home__cakeOriginals p {
+    margin: 0;
+  }
+
+  .home__cakeOriginals_headingsBox h2:nth-child(2) {
+    padding-left: 10%;
+    white-space: nowrap;
+  }
+
+  .home__cakeOriginals_contentBox {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+  }
+
+  .home__cakeOriginals_contentBox img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .home__cakeOriginals_contentBox .swiper {
+    min-width: auto;
+  }
+
+  .home__cakeOriginals video {
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  .home__cakeOriginals_cta {
+    font-size: 24px;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  .home__cakeOriginals_cta {
+    width: 250px;
+    display: block;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 100%;
+    background: #fff;
+    color: #000;
+    font-weight: 500;
+  }
+
+  .home__cakeOriginals_cta img {
+    width: 20px;
+    margin-left: 8px;
+  }
+
+  .home__cakeOriginals_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .home__cakeOriginals {
+      padding: 50px 0;
+    }
+
+    .home__cakeOriginals h2 {
+      font-size: 40px;
+    }
+
+    .home__cakeOriginals .swiper {
+      width: 100%;
+    }
+
+    .home__cakeOriginals .swiper-slide {
+      height: auto;
+      align-self: stretch;
+    }
+
+    .home__cakeOriginals_contentBox img {
+      aspect-ratio: auto;
+      height: 100%;
+    }
+
+    .home__cakeOriginals_headingsBox {
+      padding: 0 20px;
+    }
+
+    .home__cakeOriginals h2 {
+      padding-left: 0 !important;
+      font-size: 48px;
+      margin: 0;
+      line-height: 1.25;
+    }
+  }
+</style>
+
+{% assign home__cakeOriginals_img1_url = images['cf1cb3453fef5a1ffff1b14d5ab4348a.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img2_url = images['5ff1685a152e3c0db4a14dcdac5f6a5a.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img3_url = images['eaf2526a9f532daf15400ffc31963203.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img4_url = images['1cb10ee2f142d058ffa748728b331bee.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img5_url = images['7f17acc81d0a5394c2f49f850b66d8d7.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img6_url = images['45d82a84a5fda90d7300b7cd89f1bb31.jpg'] | image_url: width: 700 %}
+{% assign home__cakeOriginals_img7_url = images['a21d351d51f1aebdc309525b0e1e2d1d.jpg'] | image_url: width: 700 %}
+
+<section class="home__cakeOriginals">
+  <style>
+    .home__cakeOriginals .swiper {
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .home__cakeOriginals .swiper {
+        width: 100vw;
+        height: auto;
+      }
+    }
+  </style>
+  <div class="home__cakeOriginals_container">
+    <div class="home__cakeOriginals_headingsBox">
+      <h2>Explore our</h2>
+      <h2>original collection</h2>
+    </div>
+    <div class="home__cakeOriginals_contentBox">
+      <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="{{ home__cakeOriginals_img1_url }}" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ home__cakeOriginals_img2_url }}" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ home__cakeOriginals_img3_url }}" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ home__cakeOriginals_img4_url }}" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ home__cakeOriginals_img5_url }}" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ home__cakeOriginals_img6_url }}" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ home__cakeOriginals_img7_url }}" />
+        </div>
+        <div class="swiper-slide">
+          <video width="100%" height="100%" type="video/mp4" autoplay muted src="https://cdn.shopify.com/videos/c/o/v/bb289782f8fa46289ccccdf778bb4e55.mp4" />
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="home__cakeOriginals_right">
+      <p>Dive into our pre-made original collection. Each piece is crafted with the same passion and quality as our custom wear, offering unique designs that inspire and excite.</p>
+      <a class="home__cakeOriginals_cta">
+        <div>View <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/arrow_45deg.svg?v=1717993137" /></div>
+        <div>Collection</div>
+      </a>
+    </div>
+    </div>
+  </div>
+  <script>
+    const swiper2 = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    autoplay: {
+      delay: 5000,
+    },
+  });
+  </script>
+</section>

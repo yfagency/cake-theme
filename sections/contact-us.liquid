@@ -1,0 +1,101 @@
+<style>
+  .home__contact {
+    padding: 150px 0;
+    border-top: thin solid rgba(255,255,255,.1);
+    border-bottom: thin solid rgba(255,255,255,.1);
+  }
+
+  .home__contact_container {
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .home__contact h2 {
+    text-transform: capitalize;
+  }
+
+  .home__contact_circleText {
+    position: absolute;
+    top: -50%;
+    right: -40%;
+    width: 280px;
+  }
+
+  .home__contact_socialMedia {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .home__contact_socialMedia img {
+    width: 40px;
+    height: 40px;
+    object-fit: scale-down;
+  }
+
+  .home__contact_inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .home__contact_inner h3 {
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .home__contact {
+      border: none;
+      padding: 50px 0;
+    }
+
+    .home__contact_inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .home__contact_inner > div {
+      width: 100%;
+    }
+
+    .home__contact_inner h2 {
+      font-size: 72px;
+      line-height: 1;
+    }
+
+    .home__contact_container {
+      padding: 20px;
+    }
+
+    .home__contact_circleText {
+      top: 24%;
+      z-index: -1;
+    }
+
+    .home__contact_inner iframe {
+      backdrop-filter: blur(8px);
+    }
+  }
+</style>
+
+<section id="home__contact" class="home__contact">
+  <div class="home__contact_container">
+    <div class="home__contact_inner">
+      <div>
+        <h3 class="home__contact_title">Contact us</h3>
+        <p>Talk to us if you have any inquiries.</p>
+        <div class="home__contact_socialMedia">
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/bxl_facebook.svg?v=1717381227" />
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/simple-icons_x.svg?v=1717381227" />
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/iconoir_instagram.svg?v=1717381228" />
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/mdi_youtube.svg?v=1717381227" />
+        </div>
+      </div>
+      <iframe data-tally-src="https://tally.so/embed/3XGR0g?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="228" frameborder="0" marginheight="0" marginwidth="0" title="Contact form
+"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    </div>
+    <img class="home__contact_circleText rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/contact_section_circle_text.svg?v=1717996974" />
+  </div>
+</section>

@@ -1,0 +1,89 @@
+<style>
+  .instafeed-new-layout-wrapper {
+    gap: 8px !important;
+  }
+
+  .instafeed-new-layout-container {
+    max-width: 1160px;
+    padding: 20px 150px 0;
+    margin: 0 auto;
+  }
+
+  .instafeed-new-layout-item {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .instafeed-new-layout-item img {
+    object-fit: cover !important;
+    height: 100% !important;
+    aspect-ratio: 1/1;
+    position: relative !important;
+  }
+
+  .home__instafeed_top{
+    max-width: 1160px;
+    margin: 150px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home__instafeed_top h3 {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .home__instafeed_topLeft {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .home__instafeed_topLeft img {
+    background: #000;
+    border-radius: 100px;
+  }
+
+  @media screen and (max-width: 1024px) {
+  .instafeed-new-layout-container {
+      width: 100% !important;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .home__instafeed_container {
+      padding: 20px;
+    }
+
+    .home__instafeed_top {
+      margin-top: 50px;
+    }
+
+    .home__instafeed_top img {
+      display: none;
+    }
+
+    .home__instafeed_top h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .instafeed-new-layout-wrapper {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+
+<section class="home__instafeed">
+  <div class="home__instafeed_container">
+    <div class="home__instafeed_top">
+        <div class="home__instafeed_topLeft">
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cake_logo_round_black.svg?v=1717743012" />
+          <h3>cake.teamspirit</h3>
+        </div>
+        {% include 'button', btn_class: 'primary', btn_text: 'Follow' %}
+      </div>
+  </div>
+</section>

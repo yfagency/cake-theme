@@ -1,0 +1,50 @@
+<style>
+  .home__marquee1 {
+    color: #fff;
+    display: flex;
+    font-size: 4vw;
+    line-height: 1;
+    margin: 0;
+    width: fit-content;
+    overflow: hidden;
+  }
+
+  .home__marquee1 div {
+    display: flex;
+    flex-shrink: 0;
+    text-transform: capitalize;
+    padding: 24px 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  .home__marquee1 h3 {
+    margin: 0;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .marquee {
+    animation: marquee 30s linear infinite;
+  }
+</style>
+
+<section class="home__marquee1">
+  <div class="marquee">
+    <h3>Start Your Adventure&nbsp;-&nbsp;</h3>
+    <h3>Start Your Adventure&nbsp;-&nbsp;</h3>
+    <h3>Start Your Adventure&nbsp;-&nbsp;</h3>
+  </div>
+  <div class="marquee">
+    <h3>Start Your Adventure&nbsp;-&nbsp;</h3>
+    <h3>Start Your Adventure&nbsp;-&nbsp;</h3>
+    <h3>Start Your Adventure&nbsp;-&nbsp;</h3>
+  </div>
+</section>

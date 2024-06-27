@@ -1,0 +1,166 @@
+<style>
+  .home__testimonials_container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .home__testimonials_container h2 {
+    text-transform: capitalize;
+  }
+
+  .home__testimonials_container h2:first-child {
+    padding-left: 10vw;
+    white-space: nowrap;
+  }
+
+  .home__testimonials_topRow {
+    margin-top: 72px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .home__testimonials_topRow img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 60%;
+  }
+
+  .home__testimonials_topRow h3 {
+    font-size: 48px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .home__testimonials_bottomRow {
+    position: relative;
+    margin-top: 72px;
+  }
+
+  .home__testimonials_bottomRow > div {
+    display: flex;
+  }
+
+  .home__testimonials_bottomRow > div:first-child {
+    margin-bottom: 72px;
+  }
+
+  .home__testimonials_img2 {
+    padding: 0 112px;
+    width: 350px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .home__testimonials_bottomRow > div:nth-child(2) {
+    padding-left: 224px;
+  }
+
+  .home__testimonials_img3 {
+    width: 400px;
+    margin-right: 112px;
+  }
+
+  .home__testimonials_img3 img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .home__testimonials_img4 img {
+    margin-top: -72px;
+    width: 100%;
+    aspect-ratio: 4/3;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .home__testimonials {
+    position: relative;
+    padding-bottom: 150px;
+  }
+
+  .home__testimonials_blueLine {
+    position: absolute;
+    top: -20%;
+    right: 0;
+    z-index: -1;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .home__testimonials {
+      padding-bottom: 50px;
+    }
+
+    .home__testimonials_container {
+      padding: 20px;
+    }
+
+    .home__testimonials h2 {
+      font-size: 48px;
+      padding-left: 0 !important;
+      line-height: 1;
+    }
+
+    .home__testimonials_topRow {
+      flex-direction: column;
+      align-items: start;
+      gap: 0;
+    }
+
+    .home__testimonials_topRow img {
+      width: 100%;
+      margin-bottom: -5%;
+      margin-left: 10%;
+    }
+    
+    .home__testimonials_bottomRow div:first-child {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .home__testimonials_bottomRow div:first-child img {
+      padding: 0;
+      width: 100%;
+      margin-left: -10%;
+    }
+
+    .home__testimonials_bottomRow div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+</style>
+
+{% assign home__testimonials_img1_url = images['b7646d6f3df338c08debe74099700cae.jpg'] | image_url: width: 700 %}
+
+<section class="home__testimonials">
+  <div class="home__testimonials_container">
+    <h2>Shoutout from</h2>
+    <h2>the Teams</h2>
+    <div class="home__testimonials_topRow">
+      <img class="home__testimonials_img1" src="{{ home__testimonials_img1_url }}" />
+      <h3>Team<br/>Anabia</h3>
+    </div>
+    <div class="home__testimonials_bottomRow">
+      <div>
+        <img class="home__testimonials_img2" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/03dc6db76e27d13387963f15d55637b6.jpg?v=1717138725" />
+      <p>Early 2022, I approached Brano with my idea on a team jersey and Brano was able to quickly put my ideas and colours together into a perfect design.  The design, look and feel are exactly what I was looking for. In my 20 years of road bicycle racing, they are by far the best I've ever had! They feel great and the look AWESOME!
+      <br/><br/>
+      — David, Team Anabia</p>
+      </div>
+      <div>
+        <div class="home__testimonials_img3">
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/8875bb804f2574c763de03630a61032b.jpg?v=1717140189" />
+        </div>
+        <div class="home__testimonials_img4">
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/648b11ec38bf8523e175650f7831e7d7.jpg?v=1717140633" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="home__testimonials_blueLine" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/testimonials_line.svg?v=1717662128" />
+</section>
