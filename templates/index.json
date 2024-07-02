@@ -51,11 +51,15 @@
     },
     "testimonials": {
       "type": "testimonials"
+    },
+    "teamCollection": {
+      "type": "teamCollection"
     }
   },
   "order": [
     "header",
     "homepage",
+    "teamCollection",
     "testimonials",
     "contact-cta",
     "marquee",
