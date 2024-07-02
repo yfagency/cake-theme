@@ -1,6 +1,5 @@
 <style>
   .header {
-    color: #fff;
     position: fixed;
     width: 100%;
     padding: 16px 0;
@@ -38,10 +37,12 @@
     gap: 24px;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .headerScrolled {
-    background: #0038FF;
+    background: rgba(29, 28, 28, 0.40);
+    backdrop-filter: blur(12px);
     transition: .3s;
   }
 
@@ -51,8 +52,25 @@
   }
 
   .header nav a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
+  }
+
+  .header__highlightedLink {
+    background: #fff;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-weight: 500;
+    line-height: 1;
+    color: #0038FF !important;
+    transition: .2s linear;
+  }
+
+  .header__highlightedLink:hover {
+    background: transparent;
+    color: #fff !important;
+    transition: .2s linear;
   }
 
   @media screen and (max-width: 1024px) {
@@ -65,17 +83,14 @@
   <div class="header__container">
     <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cake_logo.svg" />
     <nav>
-      <a>about</a>
-      <a>cake make</a>
-      <a>cake shop</a>
-      <a>faq</a>
-      <a>contact</a>
-      <a href="#home__contact">get a quote</a>
+      <a>get started</a>
+      <a>about us</a>
+      <a href="#home__contact">contact us</a>
+      <a>FAQ</a>
+      <a class="header__highlightedLink">Make jersey</a>
     </nav>
     <div class="header_links">
-      <a>log in</a>
-      <a>cart</a>
-      <a>JP</a>
+      <a>日本語</a>
     </div>
   </div>
 </header>
