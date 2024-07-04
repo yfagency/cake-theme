@@ -113,7 +113,7 @@
       <div class="home__teamCollection_item">
         <a href="{{ collection.url }}">
           {% if collection.image %}
-            <div class="tilt-image"><img src="{{ collection.image.src | img_url: '400x' }}" alt="{{ collection.title }}"></div>
+            <div><img src="{{ collection.image.src | img_url: '400x' }}" alt="{{ collection.title }}"></div>
           {% else %}
             <img src="https://via.placeholder.com/300" alt="{{ collection.title }}">
           {% endif %}
@@ -131,13 +131,4 @@
     </div>
   </div>
   <img class="home__teamCollection_line" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/team_collection_line.svg?v=1717661780"/>
-
-  <script type="text/javascript">	
-
-	VanillaTilt.init(document.querySelectorAll(".tilt-image"), {
-    glare: true, // Enable glare effect
-    "max-glare": 0.5,
-    "glare-prerender": false,
-  });
-</script>
 </section>

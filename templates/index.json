@@ -5,8 +5,8 @@
       "settings": {
       }
     },
-    "homepage": {
-      "type": "homepage",
+    "homeHero": {
+      "type": "homeHero",
       "settings": {
       }
     },
@@ -34,38 +34,43 @@
       "settings": {
       }
     },
-    "contact-cta": {
-      "type": "contact-cta"
+    "contactCta": {
+      "type": "contactCta"
     },
-    "instafeed-top": {
-      "type": "instafeed-top"
+    "instafeedTop": {
+      "type": "instafeedTop"
     },
-    "contact-us": {
-      "type": "contact-us"
+    "contactUs": {
+      "type": "contactUs"
     },
-    "cake-originals": {
-      "type": "cake-originals"
-    },
-    "marquee": {
-      "type": "marquee"
+    "cakeOriginals": {
+      "type": "cakeOriginals"
     },
     "testimonials": {
       "type": "testimonials"
     },
     "teamCollection": {
       "type": "teamCollection"
+    },
+    "aboutUs": {
+      "type": "aboutUs"
+    },
+    "cakeMake": {
+      "type": "cakeMake"
     }
   },
   "order": [
     "header",
-    "homepage",
+    "homeHero",
+    "aboutUs",
+    "marquee",
+    "cakeMake",
     "teamCollection",
     "testimonials",
-    "contact-cta",
-    "marquee",
-    "cake-originals",
-    "contact-us",
-    "instafeed-top",
+    "contactCta",
+    "cakeOriginals",
+    "contactUs",
+    "instafeedTop",
     "1717735005e01777b5",
     "footer"
   ]

@@ -1,50 +1,143 @@
-<section class="home__hero">
-  <div class="hero__container">
-    <div>
-      <h1>the Cake<br>team Spirit</h1>
-      <p>Custom cycling apparel that combines bold design, superior craftsmanship, and a love for community.</p>
-      <div class="hero__buttons">
-        {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
-        {% include 'button', href: "#home__contact", btn_class: 'secondary', btn_text: 'Learn More' %}
-      </div>
-    </div>
-    <div>
-      
-      {% assign hero__jersey_url = images['hero-jersey.png'] | image_url: width: 700 %}
-      <img data-src="{{ hero__jersey_url }}" alt="Potion Header" class="lazyload hero__jersey floating">
-      <img class="hero__circleText_2 rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/hero-circle-text.svg" />
-      <div class="home__hero_socialMedia">
-        <a href=""><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/bxl_facebook.svg?v=1717381227" /></a>
-        <a href=""><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/simple-icons_x.svg?v=1717381227" /></a>
-        <a href="https://www.instagram.com/cake.teamspirit/" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/iconoir_instagram.svg?v=1717381228" /></a>
-        <a href=""><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/mdi_youtube.svg?v=1717381227" /></a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="home__aboutUs">
-  <div class="aboutUs__container">
-    <div>
-      <h2>we are canvas</h2>
-      <h2>for your story</h2>
-    </div>
-    <p>At Cake Make, we celebrate the spirit of unity and the thrill of the ride. Our custom-made cycling wear is crafted to reflect your team's unique passion and drive, helping you make a bold statement on every ride.</p>
-    {% include 'button', btn_class: 'primary', btn_text: 'About Us' %}
-  </div>
-  <img class="aboutUs__blueLine" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/aboutUs-blue-line.svg?v=1717052993"/>
-</section>
-<section class="home__marquee1">
-    <div class="marquee">
-      <h3>the cake team spirit&nbsp;-&nbsp;</h3>
-      <h3>the cake team spirit&nbsp;-&nbsp;</h3>
-      <h3>the cake team spirit&nbsp;-&nbsp;</h3>
-    </div>
-    <div class="marquee">
-      <h3>the cake team spirit&nbsp;-&nbsp;</h3>
-      <h3>the cake team spirit&nbsp;-&nbsp;</h3>
-      <h3>the cake team spirit&nbsp;-&nbsp;</h3>
-    </div>
-</section>
+<style>
+  .embla {
+    overflow: hidden;
+    color: #fff;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .home__cakeMake_jersey {
+    position: relative;
+    width: 500px;
+  }
+
+  .home__cakeMake_container {
+    max-width: 1160px;
+    margin: 150px auto;
+  }
+
+  .home__cakeMake h3 {
+    font-size: 40px;
+    line-height: 1;
+    text-transform: capitalize;
+    margin: 24px 0;
+  }
+
+  .home__cakeMake_buttons {
+    display: flex;
+    gap: 24px;
+    margin-top: 72px;
+  }
+
+  .home__cakeMake h2 {
+    color: #fff;
+    font-size: 112px;
+    text-transform: capitalize;
+  }
+
+  .embla__slide > div:first-child {
+    padding-left: 150px;
+    position: relative;
+  }
+
+  .home__cakeMake_arrow {
+    position: absolute;
+    top: 40px;
+    max-width: 100px;
+    left: 0;
+  }
+
+  .home__cakeMake_emblaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .embla__slide_textCircle {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  .swiper-pagination {
+    max-width: 135px;
+    display: flex;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    background: #fff;
+    opacity: .5;
+    transition: .5s;
+    border-radius: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .home__cakeMake .swiper {
+      width: 100%;
+    }
+
+    .home__cakeMake h2 {
+      font-size: 48px;
+      padding: 0 20px;
+    }
+
+    .home__cakeMake .embla__slide {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .home__cakeMake .swiper-slide {
+      width: 100% !important;
+      height: auto;
+      align-self: stretch;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .home__cakeMake_container {
+      margin: 50px auto;
+    }
+
+    .home__cakeMake_jersey {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .home__cakeMake .embla__slide div:first-child {
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .home__cakeMake_arrow {
+      display: none;
+    }
+
+    .swiper-pagination {
+      margin-bottom: -30px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .swiper {
+      overflow: visible !important;
+    }
+  }
+</style>
+
 <section class="home__cakeMake">
   <div class="home__cakeMake_container">
     <h2>cake make</h2>
@@ -119,10 +212,6 @@
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
 </div>
 
 <script>
@@ -134,12 +223,6 @@
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
   },
 
   autoplay: {
