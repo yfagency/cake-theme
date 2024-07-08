@@ -14,6 +14,10 @@
     align-items: center;
   }
 
+  .home__cakeMake {
+    position: relative;
+  }
+
   .home__cakeMake_jersey {
     position: relative;
     width: 500px;
@@ -83,6 +87,14 @@
   .swiper-pagination-bullet-active {
     width: 100% !important;
     opacity: 1 !important;
+  }
+
+  .cakeMake__circleText {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: -250px;
+    width: 500px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -169,7 +181,6 @@
         <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
         </div>
         <div class="embla__slide_imgBox">
-          <img class="embla__slide_textCircle rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/click-to-know_circle.svg?v=1717983903" />
           <img src="{{ home__cakeMake_gypsyJersey_url }}" alt="Gypsy Jersey" class="home__cakeMake_jersey">
         </div>
       </div>
@@ -186,7 +197,6 @@
         <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
         </div>
         <div class="embla__slide_imgBox">
-          <img class="embla__slide_textCircle rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/click-to-know_circle.svg?v=1717983903" />
           <img src="{{ home__cakeMake_alkemJersey_url }}" alt="Alkem Jersey" class="home__cakeMake_jersey" />
         </div>
       </div>
@@ -203,7 +213,6 @@
         <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
         </div>
         <div class="embla__slide_imgBox">
-          <img class="embla__slide_textCircle rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/click-to-know_circle.svg?v=1717983903" />
           <img src="{{ home__cakeMake_squadJersey_url }}" alt="Squad Jersey" class="home__cakeMake_jersey" />
         </div>
       </div>
@@ -235,4 +244,6 @@
 {% comment %} SWIPER TEST {% endcomment %}
   </div>
   
+<img class="cakeMake__circleText rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/circleText_big.svg?v=1720418502" />
+
 </section>
