@@ -1,0 +1,24 @@
+<section class="home__hero">
+  <div class="hero__container">
+    <div>
+      <h1>The Cake<br>Team Spirit</h1>
+      <p>Custom cycling apparel that combines bold design,<br> superior craftsmanship, and a love for community.</p>
+      <div class="hero__buttons">
+        {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
+        {% include 'button', href: "#home__contact", btn_class: 'secondary', btn_text: 'Learn More' %}
+      </div>
+    </div>
+    <div>
+      
+      {% assign hero__jersey_url = images['hero-jersey.png'] | image_url: width: 700 %}
+      <img data-src="{{ hero__jersey_url }}" alt="Potion Header" class="lazyload hero__jersey floating">
+      <img class="hero__circleText_2 rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/hero-circle-text.svg" />
+      <div class="home__hero_socialMedia">
+        <a href=""><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/bxl_facebook.svg?v=1717381227" /></a>
+        <a href=""><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/simple-icons_x.svg?v=1717381227" /></a>
+        <a href="https://www.instagram.com/cake.teamspirit/" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/iconoir_instagram.svg?v=1717381228" /></a>
+        <a href=""><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/mdi_youtube.svg?v=1717381227" /></a>
+      </div>
+    </div>
+  </div>
+</section>

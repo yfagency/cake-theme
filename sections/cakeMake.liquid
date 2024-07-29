@@ -1,0 +1,249 @@
+<style>
+  .embla {
+    overflow: hidden;
+    color: #fff;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .home__cakeMake {
+    position: relative;
+  }
+
+  .home__cakeMake_jersey {
+    position: relative;
+    width: 500px;
+  }
+
+  .home__cakeMake_container {
+    max-width: 1160px;
+    margin: 150px auto;
+  }
+
+  .home__cakeMake h3 {
+    font-size: 40px;
+    line-height: 1;
+    text-transform: capitalize;
+    margin: 24px 0;
+  }
+
+  .home__cakeMake_buttons {
+    display: flex;
+    gap: 24px;
+    margin-top: 72px;
+  }
+
+  .home__cakeMake h2 {
+    color: #fff;
+    font-size: 112px;
+    text-transform: capitalize;
+  }
+
+  .embla__slide > div:first-child {
+    padding-left: 150px;
+    position: relative;
+  }
+
+  .home__cakeMake_arrow {
+    position: absolute;
+    top: 40px;
+    max-width: 100px;
+    left: 0;
+  }
+
+  .home__cakeMake_emblaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .embla__slide_textCircle {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  .swiper-pagination {
+    max-width: 135px;
+    display: flex;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    background: #fff;
+    opacity: .5;
+    transition: .5s;
+    border-radius: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+
+  .cakeMake__circleText {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: -250px;
+    width: 500px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .home__cakeMake .swiper {
+      width: 100%;
+    }
+
+    .home__cakeMake h2 {
+      font-size: 48px;
+      padding: 0 20px;
+    }
+
+    .home__cakeMake .embla__slide {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .home__cakeMake .swiper-slide {
+      width: 100% !important;
+      height: auto;
+      align-self: stretch;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .home__cakeMake_container {
+      margin: 50px auto;
+    }
+
+    .home__cakeMake_jersey {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .home__cakeMake .embla__slide div:first-child {
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .home__cakeMake_arrow {
+      display: none;
+    }
+
+    .swiper-pagination {
+      margin-bottom: -30px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .swiper {
+      overflow: visible !important;
+    }
+  }
+</style>
+
+<section class="home__cakeMake">
+  <div class="home__cakeMake_container">
+    <h2>cake make</h2>
+    {% comment %} SWIPER TEST {% endcomment %}
+<style>
+  .swiper {
+  width: 1140px;
+}
+</style>
+<!-- Slider main container -->
+
+{% assign home__cakeMake_gypsyJersey_url = images['gypsy-cafe-jersey.png'] | image_url: width: 700 %}
+{% assign home__cakeMake_alkemJersey_url = images['jersey-alkem.png'] | image_url: width: 700 %}
+{% assign home__cakeMake_squadJersey_url = images['jersey-squad.png'] | image_url: width: 700 %}
+
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <div class="embla__slide">
+        <div>
+          <h3>Tailored Designs</h3>
+        <p>Bold, vibrant, and uniquely yours — our designs capture your team's essence.</p>
+        <div class="home__cakeMake_buttons">
+          {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
+          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
+        </div>
+        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+        </div>
+        <div class="embla__slide_imgBox">
+          <img src="{{ home__cakeMake_gypsyJersey_url }}" alt="Gypsy Jersey" class="home__cakeMake_jersey">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="embla__slide">
+        <div>
+          <h3>Superior Craftsmanship</h3>
+        <p>High-performance materials ensure comfort and durability on every ride.</p>
+        <div class="home__cakeMake_buttons">
+          {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
+          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
+        </div>
+        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+        </div>
+        <div class="embla__slide_imgBox">
+          <img src="{{ home__cakeMake_alkemJersey_url }}" alt="Alkem Jersey" class="home__cakeMake_jersey" />
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="embla__slide">
+        <div>
+          <h3>Full Customization</h3>
+        <p>From concept to creation, we bring your vision to life with meticulous attention to detail.</p>
+        <div class="home__cakeMake_buttons">
+          {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
+          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
+        </div>
+        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+        </div>
+        <div class="embla__slide_imgBox">
+          <img src="{{ home__cakeMake_squadJersey_url }}" alt="Squad Jersey" class="home__cakeMake_jersey" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+</div>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  autoplay: {
+    delay: 5000,
+  },
+
+});
+</script>
+
+{% comment %} SWIPER TEST {% endcomment %}
+  </div>
+  
+<img class="cakeMake__circleText rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/circleText_big.svg?v=1720418502" />
+
+</section>
