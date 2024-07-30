@@ -1,0 +1,25 @@
+{% comment %}
+  This is a basic template for a custom page in Shopify.
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+</head>
+<body>
+  {% section 'header' %}
+
+  <main>
+    <h1>{{ page.title }}</h1>
+    <div class="page-content">
+      {{ page.content }}
+    </div>
+  </main>
+
+  {% section 'footer' %}
+</body>
+</html>
