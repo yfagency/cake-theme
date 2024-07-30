@@ -1,24 +1,108 @@
-{% comment %}
-  This is a basic template for a custom page in Shopify.
-{% endcomment %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+  <title>Cake Team Spirit | {{ page.title }}</title>
+
+  <style>
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      margin-top: 104px;
+      align-items: center;
+      text-align: center;
+      padding: 150px 0;
+      position: relative;
+    }
+
+    .hero__button {
+      display: inline-block;
+      padding: 16px 40px;
+      border-radius: 40px;
+      background: #0038FF;
+      color: #FFF;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+      text-transform: uppercase;
+      margin-top: 80px;
+      transition: .3s;
+    }
+
+    .hero__button:hover {
+      background: #0330CC;
+      transition: .3s;
+      cursor: pointer;
+    }
+
+    .hero svg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    /* PROCESS */
+    .process {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .process__line {
+      position: absolute;
+      left: 0;
+      top: 150px;
+      z-index: -1;
+    }
+
+    .process h2 {
+      font-size: 70px;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    .process p {
+      color: #FFF;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      width: 60%;
+      margin: 32px auto 56px;
+    }
+  </style>
+
 </head>
 <body>
   {% section 'header' %}
 
-  <main>
-    <h1>{{ page.title }}</h1>
-    <div class="page-content">
-      {{ page.content }}
+  <hero class="hero">
+    <h1 class="hero__title">Get Started<br />with Cake Make</h1>
+    <a class="hero__button">make jersey</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="826" height="624" viewBox="0 0 826 624" fill="none">
+      <path d="M825 8.85299C360.774 -13.247 323.941 400.449 506.202 511.725C688.463 623 706.562 267.074 365.219 328.333C92.1449 377.341 13.2921 545.198 7.99997 623" stroke="#0038FF" stroke-width="15"/>
+    </svg>
+  </hero>
+  {% include 'marquee', marqueeText: 'the cake team spirit' %}
+  <section class="process">
+    <svg class="process__line" xmlns="http://www.w3.org/2000/svg" width="550" height="852" viewBox="0 0 550 852" fill="none">
+      <path d="M-37.3182 795.948C-1094.03 1113.22 1828.9 -258.099 -186.179 55.1156" stroke="#0038FF" stroke-width="15"/>
+    </svg>
+    <div class="process__intro">
+      <h2>Craft Your Team's<br>Unique Cycling Identity</h2>
+      <p>At Cake Make, we specialize in creating custom cycling apparel that captures your team's spirit and style. Follow our easy process to bring your vision to life with precision and elegance.</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="82" viewBox="0 0 16 82" fill="none">
+        <path d="M7.29289 81.7071C7.68341 82.0976 8.31658 82.0976 8.7071 81.7071L15.0711 75.3431C15.4616 74.9526 15.4616 74.3195 15.0711 73.9289C14.6805 73.5384 14.0474 73.5384 13.6569 73.9289L8 79.5858L2.34314 73.9289C1.95262 73.5384 1.31945 73.5384 0.928929 73.9289C0.538405 74.3195 0.538405 74.9526 0.928929 75.3431L7.29289 81.7071ZM7 -4.37114e-08L7 81L9 81L9 4.37114e-08L7 -4.37114e-08Z" fill="white"/>
+      </svg>
     </div>
-  </main>
+  </section>
 
   {% section 'footer' %}
 </body>
