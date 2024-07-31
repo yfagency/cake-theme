@@ -151,11 +151,130 @@
     }
 
     /* GET STARTED */
+    .getStarted {
+      margin-bottom: 150px;
+    }
+
+    .getStarted__box iframe {
+      max-width: 80%;
+    }
+
     .getStarted__box {
       padding: 60px 200px;
-      background: url('https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Property_1_Default.svg');
-      background-size: cover;
       text-align: center;
+      overflow: hidden;
+      position: relative;
+      background: rgba(23, 23, 23, 0.20);
+    }
+
+    .getStarted__box h2 {
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    .getStarted__elipse1 {
+      position: absolute;
+      width: 509.027px;
+      height: 467.775px;
+      transform: rotate(-47.253deg);
+      flex-shrink: 0;
+      border-radius: 509.027px;
+      background: rgba(0, 56, 255, 0.50);
+      filter: blur(132.25px);
+      z-index: -1;
+      animation: getStarted__elipse1 45s linear infinite;
+    }
+
+    .getStarted__elipse2 {
+      position: absolute;
+      width: 478.967px;
+      height: 210.525px;
+      transform: rotate(-47.253deg);
+      flex-shrink: 0;
+      border-radius: 478.967px;
+      background: rgba(0, 56, 255, 0.70);
+      filter: blur(116px);
+      z-index: -1;
+      animation: getStarted__elipse2 45s linear infinite;
+    }
+
+    @keyframes getStarted__elipse1 {
+      0% {
+        top: 0%;
+        right: 0%;
+      }
+      20% {
+        top: 10%;
+        right: 10%;
+      }
+      40% {
+        top: 60%;
+        right: 20%;
+      }
+      60% {
+        top: 60%;
+        right: 70%;
+      }
+      80% {
+        top: 10%;
+        right: 60%;
+      }
+      100% {
+        top: 0%;
+        right: 0%;
+      }
+    }
+
+    @keyframes getStarted__elipse2 {
+      0% {
+        bottom: 0%;
+        left: 0%;
+        transform: rotate(90deg);
+      }
+      20% {
+        bottom: 10%;
+        left: 5%;
+      }
+      40% {
+        bottom: 60%;
+        left: 10%;
+      }
+      60% {
+        bottom: 70%;
+        left: 60%;
+      }
+      80% {
+        bottom: 10%;
+        left: 90%;
+        transform: rotate(180deg);
+      }
+      100% {
+        bottom: 0%;
+        left: 0%;
+        transform: rotate(270deg);
+      }
+    }
+
+    .getStarted__circleText {
+      position: absolute;
+      z-index: -1;
+      right: -15%;
+      top: 50%;
+      margin-top: -15%;
+      width: 30%;
+      animation: getStarted__circleText 45s linear infinite;
+    }
+
+    @keyframes getStarted__circleText {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
   </style>
 
@@ -285,12 +404,23 @@
   <section class="getStarted">
     <div class="container">
       <div class="getStarted__box">
+        <div class="getStarted__elipse1"></div>
+        <div class="getStarted__elipse2"></div>
+        <img class="getStarted__circleText" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/circle-big-property-1-default.svg?v=1722413393" />
         <h2>Ready to Begin?</h2>
         <p>Start your journey to create custom cycling apparel that embodies your team's unique identity and passion. Order today and ride with pride and style.</p>
-        <iframe data-tally-src="https://tally.so/embed/waerLb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Start here"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        <iframe data-tally-src="https://tally.so/embed/waerLb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Start here"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
       </div>
     </div>
   </section>
+
+  {% include 'marquee', marqueeText: 'Start Your Adventure' %}
+
+  {% section 'cakeOriginals' %}
+
+  {% section 'contactUs' %}
+
+  {% section 'apps' %}
 
   {% section 'footer' %}
 </body>
