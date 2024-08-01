@@ -1,0 +1,30 @@
+{% comment %}
+  This template displays a list of all collections.
+{% endcomment %}
+
+<div class="collections-list">
+  {% assign collections = collections.all %}
+  {% if collections.size > 0 %}
+    <ul>
+      {% for collection in collections %}
+        <li class="collection-item">
+          <a href="{{ collection.url }}">
+            <div class="collection-image">
+              {% if collection.image %}
+                <img src="{{ collection.image.src | img_url: 'medium' }}" alt="{{ collection.title }}">
+              {% endif %}
+            </div>
+            <div class="collection-info">
+              <h2>{{ collection.title }}</h2>
+              {% if collection.description != blank %}
+                <p>{{ collection.description | strip_html | truncatewords: 20 }}</p>
+              {% endif %}
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No collections found.</p>
+  {% endif %}
+</div>
