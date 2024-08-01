@@ -1,30 +1,92 @@
-{% comment %}
-  This template displays a list of all collections.
-{% endcomment %}
+<style>
+  /* GLOBAL */
+  body {
+    position: relative;
+  }
 
-<div class="collections-list">
-  {% assign collections = collections.all %}
-  {% if collections.size > 0 %}
-    <ul>
-      {% for collection in collections %}
-        <li class="collection-item">
-          <a href="{{ collection.url }}">
-            <div class="collection-image">
-              {% if collection.image %}
-                <img src="{{ collection.image.src | img_url: 'medium' }}" alt="{{ collection.title }}">
-              {% endif %}
-            </div>
-            <div class="collection-info">
-              <h2>{{ collection.title }}</h2>
-              {% if collection.description != blank %}
-                <p>{{ collection.description | strip_html | truncatewords: 20 }}</p>
-              {% endif %}
-            </div>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No collections found.</p>
-  {% endif %}
-</div>
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .home__teamCollection_container h2,
+  .home__teamCollection_container p,
+  .home__teamCollection_cta,
+  .home__teamCollection_line {
+    display: none !important;
+  }
+
+  .home__teamCollection_container,
+  .home__teamCollection_grid {
+    margin: 0 auto !important;
+  }
+  
+  .contact-cta__container {
+    margin: 150px auto !important;
+  }
+
+  /* INTRO */
+  .intro {
+    margin-top: 104px;
+    padding: 150px 0;
+  }
+
+  .intro h1 {
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* LINES */
+  .line1 {
+    position: absolute;
+    left: 0;
+    top: 12%;
+    z-index: -1;
+  }
+
+  .line2 {
+    position: absolute;
+    right: 0;
+    top: 24%;
+    z-index: -1;
+  }
+
+  .line3 {
+    position: absolute;
+    bottom: 13%;
+    left: 0;
+    z-index: -1;
+  }
+</style>
+
+{% section 'header' %}
+
+<section class="intro container">
+  <h1>See the rest of the team work</h1>
+</section>
+
+<svg class="line1" xmlns="http://www.w3.org/2000/svg" width="650" height="788" viewBox="0 0 650 788" fill="none">
+  <path d="M-37.2246 763.285C-1130.06 914.978 1968.4 7.47828 -70.8727 8.39363" stroke="#0038FF" stroke-width="15"/>
+</svg>
+
+<svg class="line2" xmlns="http://www.w3.org/2000/svg" width="1010" height="986" viewBox="0 0 1010 986" fill="none">
+  <path d="M7.63905 0.630618C62.4185 641.618 742.595 596.042 887.99 320.567C1033.38 45.0917 450.846 102.919 617.214 556.241C750.307 918.9 1038.78 987.943 1166.38 977.132" stroke="#0038FF" stroke-width="15"/>
+</svg>
+
+<svg class="line3" xmlns="http://www.w3.org/2000/svg" width="510" height="585" viewBox="0 0 510 585" fill="none">
+  <path d="M-4.37181 582.966C263.787 -697.819 1108.31 623.45 -246.431 197.234" stroke="#0038FF" stroke-width="15"/>
+</svg>
+
+{% section 'teamCollection' %}
+
+{% section 'contactCta' %}
+
+{% section 'contactUs' %}
+
+{% section 'footer' %}
