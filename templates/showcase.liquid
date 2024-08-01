@@ -1,0 +1,19 @@
+{% comment %}
+  This is a customized collection template
+{% endcomment %}
+
+{% comment %} {% section 'collection-header' %} {% endcomment %}
+
+<div class="collection-products">
+  {% for product in collection.products %}
+    <div class="product-item">
+      <a href="{{ product.url }}">
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.price | money }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+{% comment %} {% section 'collection-footer' %} {% endcomment %}
