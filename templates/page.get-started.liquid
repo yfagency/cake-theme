@@ -1,24 +1,428 @@
-{% comment %}
-  This is a basic template for a custom page in Shopify.
-{% endcomment %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+  <title>Cake Team Spirit | {{ page.title }}</title>
+
+  <style>
+    /* GLOBAL */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      margin-top: 104px;
+      align-items: center;
+      text-align: center;
+      padding: 150px 0;
+      position: relative;
+    }
+
+    .hero__button {
+      display: inline-block;
+      padding: 16px 40px;
+      border-radius: 40px;
+      background: #0038FF;
+      color: #FFF;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+      text-transform: uppercase;
+      margin-top: 80px;
+      transition: .3s;
+    }
+
+    .hero__button:hover {
+      background: #0330CC;
+      transition: .3s;
+      cursor: pointer;
+    }
+
+    .hero svg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    /* PROCESS */
+    .process {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .process__line {
+      position: absolute;
+      left: 0;
+      top: 5%;
+      z-index: -1;
+    }
+
+    .process__line2 {
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      bottom: 12%;
+    }
+
+    .process h2 {
+      font-size: 70px;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    .process__intro p {
+      color: #FFF;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      width: 60%;
+      margin: 32px auto 56px;
+    }
+
+    .process__step {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      margin-top: 100px;
+    }
+
+    .process__step_content {
+      display: flex;
+      gap: 170px;
+      margin-top: 40px;
+    }
+
+    .process__step_info {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 50px;
+      row-gap: 0;
+    }
+
+    .process__step_info h4 {
+      margin: 0;
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    .process__step_content img {
+      width: 30%;
+      object-fit: contain;
+    }
+
+    .top-row {
+      align-self: center;
+    }
+    .bottom-row {
+      align-self: start;
+    }
+
+    .process__step_title1 {
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: capitalize;
+      margin: 0;
+    }
+
+    .process__step_title2 {
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: capitalize;
+      margin: 0;
+    }
+
+    /* GET STARTED */
+    .getStarted {
+      margin-bottom: 150px;
+    }
+
+    .getStarted__box iframe {
+      max-width: 80%;
+    }
+
+    .getStarted__box {
+      padding: 60px 200px;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      background: rgba(23, 23, 23, 0.20);
+      backdrop-filter: blur(50px);
+    }
+
+    .getStarted__box h2 {
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    .getStarted__elipse1 {
+      position: absolute;
+      width: 509.027px;
+      height: 467.775px;
+      transform: rotate(-47.253deg);
+      flex-shrink: 0;
+      border-radius: 509.027px;
+      background: rgba(0, 56, 255, 0.50);
+      filter: blur(132.25px);
+      z-index: -1;
+      animation: getStarted__elipse1 45s linear infinite;
+    }
+
+    .getStarted__elipse2 {
+      position: absolute;
+      width: 478.967px;
+      height: 210.525px;
+      transform: rotate(-47.253deg);
+      flex-shrink: 0;
+      border-radius: 478.967px;
+      background: rgba(0, 56, 255, 0.70);
+      filter: blur(116px);
+      z-index: -1;
+      animation: getStarted__elipse2 45s linear infinite;
+    }
+
+    @keyframes getStarted__elipse1 {
+      0% {
+        top: 0%;
+        right: 0%;
+      }
+      20% {
+        top: 10%;
+        right: 10%;
+      }
+      40% {
+        top: 60%;
+        right: 20%;
+      }
+      60% {
+        top: 60%;
+        right: 70%;
+      }
+      80% {
+        top: 10%;
+        right: 60%;
+      }
+      100% {
+        top: 0%;
+        right: 0%;
+      }
+    }
+
+    @keyframes getStarted__elipse2 {
+      0% {
+        bottom: 0%;
+        left: 0%;
+        transform: rotate(90deg);
+      }
+      20% {
+        bottom: 10%;
+        left: 5%;
+      }
+      40% {
+        bottom: 60%;
+        left: 10%;
+      }
+      60% {
+        bottom: 70%;
+        left: 60%;
+      }
+      80% {
+        bottom: 10%;
+        left: 90%;
+        transform: rotate(180deg);
+      }
+      100% {
+        bottom: 0%;
+        left: 0%;
+        transform: rotate(270deg);
+      }
+    }
+
+    .getStarted__circleText {
+      position: absolute;
+      z-index: -1;
+      right: -15%;
+      top: 50%;
+      margin-top: -15%;
+      width: 30%;
+      animation: getStarted__circleText 45s linear infinite;
+    }
+
+    @keyframes getStarted__circleText {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
 </head>
 <body>
   {% section 'header' %}
 
-  <main>
-    <h1>{{ page.title }}</h1>
-    <div class="page-content">
-      {{ page.content }}
+  <hero class="hero">
+    <h1 class="hero__title">Get Started<br />with Cake Make</h1>
+    <a class="hero__button">make jersey</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="826" height="624" viewBox="0 0 826 624" fill="none">
+      <path d="M825 8.85299C360.774 -13.247 323.941 400.449 506.202 511.725C688.463 623 706.562 267.074 365.219 328.333C92.1449 377.341 13.2921 545.198 7.99997 623" stroke="#0038FF" stroke-width="15"/>
+    </svg>
+  </hero>
+
+  {% include 'marquee', marqueeText: 'the cake team spirit' %}
+
+  <section class="process">
+    <div class="container">
+      <svg class="process__line" xmlns="http://www.w3.org/2000/svg" width="550" height="852" viewBox="0 0 550 852" fill="none">
+        <path d="M-37.3182 795.948C-1094.03 1113.22 1828.9 -258.099 -186.179 55.1156" stroke="#0038FF" stroke-width="15"/>
+      </svg>
+      <div class="process__intro">
+        <h2>Craft Your Team's<br>Unique Cycling Identity</h2>
+        <p>At Cake Make, we specialize in creating custom cycling apparel that captures your team's spirit and style. Follow our easy process to bring your vision to life with precision and elegance.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="82" viewBox="0 0 16 82" fill="none">
+          <path d="M7.29289 81.7071C7.68341 82.0976 8.31658 82.0976 8.7071 81.7071L15.0711 75.3431C15.4616 74.9526 15.4616 74.3195 15.0711 73.9289C14.6805 73.5384 14.0474 73.5384 13.6569 73.9289L8 79.5858L2.34314 73.9289C1.95262 73.5384 1.31945 73.5384 0.928929 73.9289C0.538405 74.3195 0.538405 74.9526 0.928929 75.3431L7.29289 81.7071ZM7 -4.37114e-08L7 81L9 81L9 4.37114e-08L7 -4.37114e-08Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="process__step">
+        <h3 class="process__step_title1">Step 1:</h3>
+        <h3 class="process__step_title2">Consultation</h3>
+        <div class="process__step_content">
+          <div class="process__step_info">
+            <svg class="top-row" xmlns="http://www.w3.org/2000/svg" width="98" height="16" viewBox="0 0 98 16" fill="none">
+              <path d="M97.7071 8.70711C98.0976 8.31658 98.0976 7.68342 97.7071 7.29289L91.3431 0.928932C90.9526 0.538408 90.3195 0.538408 89.9289 0.928932C89.5384 1.31946 89.5384 1.95262 89.9289 2.34315L95.5858 8L89.9289 13.6569C89.5384 14.0474 89.5384 14.6805 89.9289 15.0711C90.3195 15.4616 90.9526 15.4616 91.3431 15.0711L97.7071 8.70711ZM0 9H97V7H0L0 9Z" fill="white"/>
+            </svg>
+            <h4 class="top-row">Share Your Vision</h4>
+            <div></div>
+            <div>
+              <p><b>Initial Meeting:</b> Schedule a consultation with us to discuss your team's needs, design ideas, and performance requirements.</p>
+              <p><b>Design Brief:</b> Provide us with your team's logo, colors, and any specific design elements you want to include.</p>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/pic_1.png" />
+        </div>
+      </div>
+      <div class="process__step">
+        <h3 class="process__step_title1">Step 2:</h3>
+        <h3 class="process__step_title2">Design Development</h3>
+        <div class="process__step_content">
+          <div class="process__step_info">
+            <svg class="top-row" xmlns="http://www.w3.org/2000/svg" width="98" height="16" viewBox="0 0 98 16" fill="none">
+              <path d="M97.7071 8.70711C98.0976 8.31658 98.0976 7.68342 97.7071 7.29289L91.3431 0.928932C90.9526 0.538408 90.3195 0.538408 89.9289 0.928932C89.5384 1.31946 89.5384 1.95262 89.9289 2.34315L95.5858 8L89.9289 13.6569C89.5384 14.0474 89.5384 14.6805 89.9289 15.0711C90.3195 15.4616 90.9526 15.4616 91.3431 15.0711L97.7071 8.70711ZM0 9H97V7H0L0 9Z" fill="white"/>
+            </svg>
+            <h4 class="top-row">Bringing Your Ideas to Life</h4>
+            <div></div>
+            <div>
+              <p><b>Concept Creation:</b> Our talented design team will create multiple concepts based on your brief.</p>
+              <p><b>Review and Feedback:</b> Review the designs and give us your feedback. We'll refine the designs until they perfectly capture your vision.</p>
+              <p><b>Final Approval:</b> Once you're completely satisfied, we'll move on to the next stage.</p>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/pic_2.png" />
+        </div>
+      </div>
+      <div class="process__step">
+        <h3 class="process__step_title1">Step 3:</h3>
+        <h3 class="process__step_title2">Sizing and Sampling</h3>
+        <div class="process__step_content">
+          <div class="process__step_info">
+            <svg class="top-row" xmlns="http://www.w3.org/2000/svg" width="98" height="16" viewBox="0 0 98 16" fill="none">
+              <path d="M97.7071 8.70711C98.0976 8.31658 98.0976 7.68342 97.7071 7.29289L91.3431 0.928932C90.9526 0.538408 90.3195 0.538408 89.9289 0.928932C89.5384 1.31946 89.5384 1.95262 89.9289 2.34315L95.5858 8L89.9289 13.6569C89.5384 14.0474 89.5384 14.6805 89.9289 15.0711C90.3195 15.4616 90.9526 15.4616 91.3431 15.0711L97.7071 8.70711ZM0 9H97V7H0L0 9Z" fill="white"/>
+            </svg>
+            <h4 class="top-row">Ensuring the Perfect Fit</h4>
+            <div></div>
+            <div>
+              <p><b>Size Kits:</b> We'll send you a size kit to ensure every team member gets the perfect fit.</p>
+              <p><b>Sample Approval:</b> Check the sample for fit, comfort, and aesthetics before full production begins.</p>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/pic_3.png" />
+        </div>
+      </div>
+      <div class="process__step">
+        <h3 class="process__step_title1">Step 4:</h3>
+        <h3 class="process__step_title2">Production</h3>
+        <div class="process__step_content">
+          <div class="process__step_info">
+            <svg class="top-row" xmlns="http://www.w3.org/2000/svg" width="98" height="16" viewBox="0 0 98 16" fill="none">
+              <path d="M97.7071 8.70711C98.0976 8.31658 98.0976 7.68342 97.7071 7.29289L91.3431 0.928932C90.9526 0.538408 90.3195 0.538408 89.9289 0.928932C89.5384 1.31946 89.5384 1.95262 89.9289 2.34315L95.5858 8L89.9289 13.6569C89.5384 14.0474 89.5384 14.6805 89.9289 15.0711C90.3195 15.4616 90.9526 15.4616 91.3431 15.0711L97.7071 8.70711ZM0 9H97V7H0L0 9Z" fill="white"/>
+            </svg>
+            <h4 class="top-row">Crafting Your Custom Apparel</h4>
+            <div></div>
+            <div>
+              <p><b>Quality Materials:</b> We use the best fabrics to ensure durability, breathability, and comfort.</p>
+              <p><b>Expert Craftsmanship:</b> Our skilled artisans produce your custom cycling wear with meticulous attention to detail.</p>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/pic_4.png" />
+        </div>
+      </div>
+      <div class="process__step">
+        <h3 class="process__step_title1">Step 5:</h3>
+        <h3 class="process__step_title2">Delivery and Support</h3>
+        <div class="process__step_content">
+          <div class="process__step_info">
+            <svg class="top-row" xmlns="http://www.w3.org/2000/svg" width="98" height="16" viewBox="0 0 98 16" fill="none">
+              <path d="M97.7071 8.70711C98.0976 8.31658 98.0976 7.68342 97.7071 7.29289L91.3431 0.928932C90.9526 0.538408 90.3195 0.538408 89.9289 0.928932C89.5384 1.31946 89.5384 1.95262 89.9289 2.34315L95.5858 8L89.9289 13.6569C89.5384 14.0474 89.5384 14.6805 89.9289 15.0711C90.3195 15.4616 90.9526 15.4616 91.3431 15.0711L97.7071 8.70711ZM0 9H97V7H0L0 9Z" fill="white"/>
+            </svg>
+            <h4 class="top-row">Enjoy Your Custom Gear</h4>
+            <div></div>
+            <div>
+              <p><b>Delivery:</b> Once production is complete, your custom gear will be carefully packaged and shipped to you.</p>
+              <p><b>Ongoing Support:</b> We're here to help with any questions or additional orders you may have.</p>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/pic_5.png" />
+        </div>
+      </div>
     </div>
-  </main>
+    <svg class="process__line2" xmlns="http://www.w3.org/2000/svg" width="510" height="585" viewBox="0 0 510 585" fill="none">
+      <path d="M-4.37132 582.966C263.787 -697.819 1108.31 623.45 -246.431 197.234" stroke="#0038FF" stroke-width="15"/>
+    </svg>
+  </section>
+
+  <section class="getStarted">
+    <div class="container">
+      <div class="getStarted__box">
+        <div class="getStarted__elipse1"></div>
+        <div class="getStarted__elipse2"></div>
+        <img class="getStarted__circleText" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/circle-big-property-1-default.svg?v=1722413393" />
+        <h2>Ready to Begin?</h2>
+        <p>Start your journey to create custom cycling apparel that embodies your team's unique identity and passion. Order today and ride with pride and style.</p>
+        <iframe data-tally-src="https://tally.so/embed/waerLb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Start here"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+      </div>
+    </div>
+  </section>
+
+  {% include 'marquee', marqueeText: 'Start Your Adventure' %}
+
+  {% section 'cakeOriginals' %}
+
+  {% section 'contactUs' %}
+
+  {% section 'instafeedTop' %}
+  <div id="insta-feed"></div>
 
   {% section 'footer' %}
 </body>
