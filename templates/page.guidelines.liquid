@@ -1,1 +1,276 @@
-<h1>guidelines</h1>
+<style>
+  /* GLOBAL */
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  /* HERO */
+  .hero {
+    margin-top: 104px;
+    padding: 150px 0;
+    position: relative;
+    text-align: center;
+  }
+
+  .hero__line {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    z-index: -1;
+  }
+
+  .hero__title {
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .hero__text {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    width: 70%;
+    margin: 0 auto 50px;
+  }
+
+  /* GUIDELINES */
+  .guidelines {
+    padding: 150px 0;
+  }
+
+  .guidelines__itemTitle {
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .guidelines__itemText {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 60%;
+  }
+
+  /* ACCORDION */
+  .accordion {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .accordion-item:last-child {
+      border-bottom: none;
+  }
+
+  .accordion-header {
+    width: 100%;
+    padding: 0;
+    text-align: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    background: none;
+    color: #fff;
+  }
+
+  .accordion-content {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+  }
+
+  .accordion-content p {
+      margin: 15px 0;
+  }
+
+  .accordionContent__title {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .accordionContent__text {
+    max-width: 60%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+</style>
+
+{% section 'header' %}
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title">Your Blueprint for Custom Excellence</h1>
+    <p class="hero__text">Welcome to Cake Make, where we transform your vision into high-performance, stylish cycling apparel. Our design and production guidelines ensure that every piece we create reflects the quality and craftsmanship that define our brand.</p>
+    <svg class="hero__arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="82" viewBox="0 0 16 82" fill="none">
+      <path d="M7.29289 81.7071C7.68341 82.0976 8.31658 82.0976 8.7071 81.7071L15.0711 75.3431C15.4616 74.9526 15.4616 74.3195 15.0711 73.9289C14.6805 73.5384 14.0474 73.5384 13.6569 73.9289L8 79.5858L2.34314 73.9289C1.95262 73.5384 1.31945 73.5384 0.928929 73.9289C0.538405 74.3195 0.538405 74.9526 0.928929 75.3431L7.29289 81.7071ZM7 -4.37114e-08L7 81L9 81L9 4.37114e-08L7 -4.37114e-08Z" fill="white"/>
+    </svg>
+    <svg class="hero__line" xmlns="http://www.w3.org/2000/svg" width="675" height="673" viewBox="0 0 675 673" fill="none">
+      <path d="M812.167 669.447C89.5747 -952.453 -651.997 1041.91 1022.71 88.4972" stroke="#0038FF" stroke-width="15"/>
+    </svg>
+  </div>
+</section>
+
+{% include 'marquee', marqueeText: 'Start Your Adventure' %}
+
+<section class="guidelines ">
+  <div class="container">
+    <div class="guidelines__item">
+      {% comment %} ACCORDION {% endcomment %}
+        <div class="accordion">
+          <div class="accordion-item">
+            <h2 class="guidelines__itemTitle">Design Guidelines</h2>
+            <p class="guidelines__itemText">Here, we lay the foundation for creating custom jerseys that embody your team's spirit with precision and flair. Following these guidelines ensures a smooth journey from concept to creation.</p>
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+              </svg>
+            </button>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">File Format</h3>
+              <p class="accordionContent__text">Acceptable Formats: Please submit designs in PNG or JPEG format. Ensure your design is finalized before submission.</p>
+
+              <h3 class="accordionContent__title">Minimum Resolution</h3>
+              <p class="accordionContent__text">For crisp, clear prints, provide files with a minimum resolution of 300 DPI.</p>
+
+              <h3 class="accordionContent__title">Dimensions</h3>
+              <p class="accordionContent__text">Recommended Size: 2000x2000 pixels, perfectly matching the jersey's printable area.</p>
+
+              <h3 class="accordionContent__title">Color Scheme</h3>
+              <p class="accordionContent__text">Models: Use RGB or CMYK for vibrant, true-to-life colors.</p>
+
+              <h3 class="accordionContent__title">Typography</h3>
+              <p class="accordionContent__text">Opt for your brand's font or a similar style to maintain consistency.</p>
+
+              <h3 class="accordionContent__title">Logo Placement</h3>
+              <p class="accordionContent__text">Options: Position logos on the front, back, or sleeves for maximum impact.</p>
+
+              <h3 class="accordionContent__title">Imagery and Graphics</h3>
+              <p class="accordionContent__text">Choose high-quality, relevant visuals that enhance, not overcrowd, your design.</p>
+
+              <h3 class="accordionContent__title">Copyright and Permissions</h3>
+              <p class="accordionContent__text">Important: Ensure you have the rights to all images and logos used.</p>
+            </div>
+          </div>
+            <div class="accordion-item">
+              <h2 class="guidelines__itemTitle">Production Guidelines</h2>
+              <p class="guidelines__itemText">At Cake Make, our commitment to excellence extends from design to production. These guidelines will help ensure that your custom cycling apparel meets the highest standards.</p>
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+                <div class="accordion-content">
+                  <h3 class="accordionContent__title">Sizes</h3>
+                  <p class="accordionContent__text">Use our Size Chart for accuracy. Include preferences for a snug or relaxed fit.</p>
+
+                  <h3 class="accordionContent__title">Quantity</h3>
+                  <p class="accordionContent__text">Specify the exact number of jerseys per size to avoid discrepancies.</p>
+
+                  <h3 class="accordionContent__title">Material</h3>
+                  <p class="accordionContent__text">Select from premium materials like polyester, cotton, or blends based on availability and preference.</p>
+
+                  <h3 class="accordionContent__title">Special Requests</h3>
+                  <p class="accordionContent__text">Detail any custom features such as additional padding or ventilation enhancements.</p>
+
+                  <h3 class="accordionContent__title">Order Review</h3>
+                  <p class="accordionContent__text">Double-check all details before submission to ensure a flawless order process.</p>
+
+                  <h3 class="accordionContent__title">Delivery Details</h3>
+                  <p class="accordionContent__text">Provide a complete, accurate delivery address and any specific instructions. International shipping is available. </p>
+
+                  <h3 class="accordionContent__title">Production Time</h3>
+                  <p class="accordionContent__text">Allow for a production timeline of X weeks post-design approval. Plan your order accordingly.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="guidelines__itemTitle">Sizing charts</h2>
+              <p class="guidelines__itemText">Accurate sizing ensures comfort and performance. Use our charts to find the perfect fit based on height and weight for men and women.</p>
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+                <div class="accordion-content">
+                  <h3 class="accordionContent__title">For the Perfect Fit</h3>
+                  <p class="accordionContent__text">Beyond our size chart, we highly recommend using our sample size kit. Physically assess the fit and feel of our jerseys to ensure every team member has the ideal size. Contact us to learn more about acquiring a sample size kit.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="guidelines__itemTitle">Important Considerations</h2>
+              <p class="guidelines__itemText">Accurate sizing ensures comfort and performance. Use our charts to find the perfect fit based on height and weight for men and women.</p>
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+                <div class="accordion-content">
+                  <h3 class="accordionContent__title">First-Time Customer Expectations</h3>
+                  <p class="accordionContent__text">Creating something unique takes time and collaboration. We're here to guide you through the process and make sure your vision becomes a reality. Just remember, it might take a bit longer than expected, but we promise it will be worth it!</p>
+
+                  <h3 class="accordionContent__title">Design and Production Timelines</h3>
+                  <p class="accordionContent__text">Great things take time! Custom designs and high-quality production require a little patience. We appreciate your understanding as we work to craft your custom wear to perfection.</p>
+
+                  <h3 class="accordionContent__title">Color Variations</h3>
+                  <p class="accordionContent__text">Every effort is made to match your chosen colors, but slight variations can happen. We strive to keep these differences to a minimum while maintaining the integrity of your design.</p>
+
+                  <h3 class="accordionContent__title">Size Fit Guarantee</h3>
+                  <p class="accordionContent__text">We want you to feel confident in your fit. Use our size chart and consider our sample size kit to get the best fit for every team member. Unfortunately, we can't make changes once production starts, so double-check those sizes!</p>
+
+                  <h3 class="accordionContent__title">Material Availability</h3>
+                  <p class="accordionContent__text">We do our best to offer a variety of materials, but sometimes substitutions are necessary. Rest assured, we will never compromise on quality or the overall look of your design.</p>
+
+                  <h3 class="accordionContent__title">Copyright Responsibilities</h3>
+                  <p class="accordionContent__text">It's important to ensure you have the rights to any logos or images you use. This helps avoid any legal issues down the line and ensures your design process goes smoothly.</p>
+
+                  <h3 class="accordionContent__title">Final Approval</h3>
+                  <p class="accordionContent__text">Before we start production, you'll need to approve the final design. No changes can be made after this point, so take your time to review everything carefully and make sure you're completely happy with your choices.</p>
+                  <p class="accordionContent__text">By moving forward with your order, you acknowledge these considerations, helping to set clear expectations and pave the way for a successful collaboration that celebrates your team's unique identity.</p>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+          function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+  
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+            } else {
+              const activeContents = document.querySelectorAll('.accordion-content');
+              activeContents.forEach(item => item.style.maxHeight = null);
+              content.style.maxHeight = content.scrollHeight + 'px';
+            }
+          }
+        </script>
+      {% comment %} ACCORDION {% endcomment %}
+
+    </div>
+  </div>
+</section>
+
+{% section 'contactCta' %}
+
+{% section 'contactUs' %}
+
+{% section 'footer' %}
