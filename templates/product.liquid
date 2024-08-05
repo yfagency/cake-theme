@@ -1,1 +1,192 @@
-<h1>Hello</h1>
+<style>
+  /* GLOBAL */
+  body {
+    position: relative;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1160px;
+  }
+
+  /* SWIPER */
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  swiper-slide {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .mySwiper {
+    height: 80%;
+    width: 100%;
+  }
+
+  .mySwiper2 {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .mySwiper2 swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* MAIN */
+  .main {
+    padding: 150px 0;
+    margin-top: 104px;
+  }
+
+  .product-images {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .product-page {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .product-info h1 {
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .product-info__attributes {
+    display: flex;
+    gap: 15px;
+  }
+
+  .product-info__attributes_name {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .product-info__attributes_value {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .productPage__line {
+    position: absolute;
+    top: 254px;
+    right: 0;
+    z-index: -1;
+  }
+
+  .productPage__line2 {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    z-index: -1;
+  }
+</style>
+
+{% section 'header' %}
+
+<main role="main" class="main container">
+  <svg class="productPage__line" xmlns="http://www.w3.org/2000/svg" width="1045" height="594" viewBox="0 0 1045 594" fill="none">
+    <path d="M7.97377 512.647C151.681 58.2173 729.439 209.606 745.966 446.807C763.76 702.188 322.127 593.197 571.576 224.823C732.631 -13.0153 968.818 -8.63673 1066.78 23.2824" stroke="#0038FF" stroke-width="15"/>
+  </svg>
+  <div class="product-page">
+
+    <div class="product-images">
+      <swiper-container class="mySwiper"
+    thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+      {% for image in product.images %}
+      <swiper-slide>
+        <img src="{{ image | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+      </swiper-slide>
+    {% endfor %}
+    </swiper-container>
+
+    <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true" watch-slides-progress="true">
+      {% for image in product.images %}
+        <swiper-slide>
+          <img src="{{ image | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+        </swiper-slide>
+      {% endfor %}
+    </swiper-container>
+    </div>
+    
+    <div class="product-info">
+      <h1>{{ product.title }}</h1>
+      <p>{{ product.description }}</p>
+
+      <div class="product-info__attributes">
+        <span class="product-info__attributes_name">Collection:</span>
+        {% for collection in product.collections %}
+          <span class="product-info__attributes_value">{{ collection.title }}</span>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<svg class="productPage__line2" xmlns="http://www.w3.org/2000/svg" width="510" height="585" viewBox="0 0 510 585" fill="none">
+  <path d="M-4.37181 582.966C263.787 -697.819 1108.31 623.45 -246.431 197.234" stroke="#0038FF" stroke-width="15"/>
+</svg>
+
+{% section 'contactCta' %}
+
+{% section 'contactUs' %}
+
+{% section 'footer' %}
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
