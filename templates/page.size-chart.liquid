@@ -1,1 +1,119 @@
-<h1>size chart</h1>
+<style>
+  /* GLOBAL */
+  body {
+    position: relative;
+  }
+
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  /* HERO */
+  .hero {
+    margin-top: 104px;
+    padding: 150px 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .hero p {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+  }
+
+  .hero__line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  /* JERSEY CHART */
+  .jerseyChart__title {
+    text-align: center;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .jerseyChart__product {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .jerseyChart__tableSize {
+    display: block;
+    border-top: thin solid #fff;
+  }
+
+  .jerseyChart__reminder {
+    text-align: center;
+    max-width: 70%;
+    margin: 30px auto 80px;
+  }
+
+  .jerseyChart__sizeRecomTitle {
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  /* BIB CHART */
+  .bibChart {
+    margin-top: 150px;
+  }
+</style>
+
+{% section 'header' %}
+
+<section class="hero">
+
+  <svg class="hero__line" xmlns="http://www.w3.org/2000/svg" width="1327" height="580" viewBox="0 0 1327 580" fill="none">
+    <path d="M1318.89 -187.325C1184.55 412.446 425.468 281.887 377.978 -21.0485C326.849 -347.2 906.337 -256.047 626.611 244.861C316.435 800.298 -321.025 487.237 -450.423 457.069" stroke="#0038FF" stroke-width="15"/>
+  </svg>
+
+  <div class="container">
+    <h1>Size chart</h1>
+    <p>text for size chart</p>
+  </div>
+</section>
+
+<section class="jerseyChart">
+  <div class="container">
+    <h2 class="jerseyChart__title">jersey Size chart</h2>
+    <img class="jerseyChart__product" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey_pic.svg?v=1723017663" />
+    <p>Unit: CM</p>
+    <img class="jerseyChart__tableSize" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/table-size.svg?v=1723017884" />
+    <p class="jerseyChart__reminder">Reminder: The size is for reference only. There is an error of 2~4CM in manual measurement due to different personal body shapes and wearing habits.</p>
+    <h3 class="jerseyChart__sizeRecomTitle">Size recommendation</h3>
+    <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/table-recom.svg?v=1723018217" />
+  </div>
+</section>
+
+<section class="bibChart">
+  <div class="container">
+    <h2 class="jerseyChart__title">Bib Short Size chart</h2>
+    <img class="jerseyChart__product" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/short_pic.svg?v=1723018399" />
+    <p>Unit: CM</p>
+    <img class="jerseyChart__tableSize" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/table-sizebib.svg?v=1723018533" />
+    <p class="jerseyChart__reminder">Reminder: The size is for reference only. There is an error of 2~3CM in manual measurement due to different personal body shapes and wearing habits.</p>
+  </div>
+</section>
+
+{% section 'contactUs' %}
+
+{% section 'footer' %}
