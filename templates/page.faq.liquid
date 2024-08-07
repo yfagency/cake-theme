@@ -1,1 +1,355 @@
-<h1>FAQ</h1>
+<style>
+  /* GLOBAL */
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  body {
+    position: relative;
+  }
+
+  /* HERO */
+  .hero {
+    margin-top: 104px;
+    text-align: center;
+    padding: 150px 0;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .hero p {
+    max-width: 70%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+  }
+
+  .hero__arrow {
+    margin-top: 80px;
+  }
+
+  .hero__line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    top: 5%;
+  }
+
+  /* ACCORDION */
+  .accordion {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 150px 0;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+
+  .accordion-item:last-child {
+      border-bottom: none;
+  }
+
+  .accordion-header {
+    width: 100%;
+    padding: 0;
+    text-align: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    background: none;
+    color: #fff;
+  }
+
+  .accordion-content {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+  }
+
+  .accordion-content p {
+      margin: 15px 0;
+  }
+
+  .accordionContent__title {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .accordionContent__text {
+    max-width: 60%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .guidelines__itemTitle {
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0;
+  }
+
+  .guidelines__itemText {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 60%;
+  }
+
+  .accordionItem__toggle {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .accordion__bottomText {
+    font-family: roboto;
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    max-width: 70%;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+</style>
+
+{% section 'header' %}
+
+<section class="hero">
+  <svg class="hero__line" xmlns="http://www.w3.org/2000/svg" width="675" height="673" viewBox="0 0 675 673" fill="none">
+    <path d="M812.167 669.447C89.5747 -952.453 -651.997 1041.91 1022.71 88.4972" stroke="#0038FF" stroke-width="15"/>
+  </svg>
+  <div class="container">
+    <h1>Your Questions, Answered</h1>
+    <p>Welcome to the Cake Make FAQ page. Here, we provide clear answers to your most frequently asked questions. If you need further assistance, please don't hesitate to contact us.</p>
+    <svg class="hero__arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="82" viewBox="0 0 16 82" fill="none">
+  <path d="M7.29289 81.7071C7.68341 82.0976 8.31658 82.0976 8.7071 81.7071L15.0711 75.3431C15.4616 74.9526 15.4616 74.3195 15.0711 73.9289C14.6805 73.5384 14.0474 73.5384 13.6569 73.9289L8 79.5858L2.34314 73.9289C1.95262 73.5384 1.31945 73.5384 0.928929 73.9289C0.538405 74.3195 0.538405 74.9526 0.928929 75.3431L7.29289 81.7071ZM7 -4.37114e-08L7 81L9 81L9 4.37114e-08L7 -4.37114e-08Z" fill="white"/>
+</svg>
+  </div>
+</section>
+
+<section>
+  <div class="accordion container">
+          <div class="accordion-item">
+            <div class="accordionItem__toggle" onclick="toggleAccordion(this)">
+              <h2 class="guidelines__itemTitle">General Questions</h2>
+              <button class="accordion-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">What is Cake Make?</h3>
+              <p class="accordionContent__text">Cake Make is our bespoke service for creating custom cycling apparel that reflects your team's unique identity and spirit. We blend exceptional design, superior craftsmanship, and high-performance materials to deliver gear that stands out.</p>
+
+              <h3 class="accordionContent__title">How can I contact customer service?</h3>
+              <p class="accordionContent__text">Our dedicated customer service team is here to assist you. Please reach out to us via our contact page or email us at hi@thecake.ooo.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordionItem__toggle" onclick="toggleAccordion(this)">
+              <h2 class="guidelines__itemTitle">Custom orders</h2>
+              <button class="accordion-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">How do I place a custom order?</h3>
+              <p class="accordionContent__text">Start by visiting our Get Started page to schedule a consultation and submit your design brief. Our team will guide you through each step of the process.</p>
+
+              <h3 class="accordionContent__title">What is the process for creating custom apparel?</h3>
+              <p class="accordionContent__text">
+                At Cake Make, we start with a concept submission. Here's a streamlined overview of our process:
+
+                <ol>
+                  <li>Choose Tier and Volume: Select your order details and pay a deposit.</li>
+                  <li>Submit Your Vision: Provide us with your design desires, including old jersey photos, team logos in EPS or AI format, and inspiration images.</li>
+                  <li>Initial Consultation: After commitment, we'll schedule a call to discuss your vision in detail.</li>
+                  <li>Design Development: Our Cake Design Lab creates and refines your custom design.</li>
+                  <li>Sizing and Sampling: We provide size kits and sample designs for your approval.</li>
+                  <li>Production: We produce your custom gear with precision and care.</li>
+                  <li>Delivery: Your finished apparel is delivered, ready to wear.</li>
+                </ol>
+
+                This process ensures your vision is perfectly realized.
+              </p>
+
+              <h3 class="accordionContent__title">What is the lead time for custom orders?</h3>
+              <p class="accordionContent__text">Custom orders typically take 8 weeks from design approval to delivery. We recommend starting the process early to ensure timely delivery.</p>
+
+              <h3 class="accordionContent__title">Can I request specific materials or designs for custom orders?</h3>
+              <p class="accordionContent__text">Material selection is determined by the tier you choose, as each tier is designed to suit specific functionalities. You can request preferences within your chosen tier, and our team will work with you to create a design that meets your specific needs and preferences.</p>
+
+              <h3 class="accordionContent__title">Are there minimum order quantities for custom apparel?</h3>
+              <p class="accordionContent__text">Yes, we require a minimum order quantity of 10 pieces per article. You can combine sizes between 3XS and 4XL to meet this requirement. This ensures we can provide the best quality and pricing.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordionItem__toggle" onclick="toggleAccordion(this)">
+              <h2 class="guidelines__itemTitle">Design Guidelines</h2>
+              <button class="accordion-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">What file formats do you accept for design submissions?</h3>
+              <p class="accordionContent__text">We accept PNG, JPEG, and vector files such as .ai or .eps. At Cake Make, we begin with a concept submission, not a design submission. Our Cake Design Lab will create all jersey designs. Clients can send us photos of their old jerseys, team logos in EPS or AI format, and any desired look and feel inspirations such as screenshots, Pinterest boards, or images. Additionally, clients can share details about their club, ideas, and mission to help us capture the essence of their vision. Our process includes initial consultation, design development, sizing and sampling, production, and delivery, ensuring your vision is perfectly realized.</p>
+
+              <h3 class="accordionContent__title">What resolution is required for submitted designs?</h3>
+              <p class="accordionContent__text"> For crisp and clear prints, please provide files with a minimum resolution of 300 DPI.</p>
+
+              <h3 class="accordionContent__title">Can you help with the design process?</h3>
+              <p class="accordionContent__text">Absolutely! The design process is at the core of our proposition. Our talented team collaborates with you, offering consultations and revisions to create a design that perfectly captures your team's spirit. We ensure you receive a design that's unmatched in quality and creativity.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordionItem__toggle" onclick="toggleAccordion(this)">
+              <h2 class="guidelines__itemTitle">Sizing and Sampling</h2>
+              <button class="accordion-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">How do I ensure the right fit for my team?</h3>
+              <p class="accordionContent__text">We provide size kits to ensure every team member gets the perfect fit. You can also receive a sample of the final design to check for fit and comfort before full production begins.</p>
+
+              <h3 class="accordionContent__title">What is included in a size kit?</h3>
+              <p class="accordionContent__text">The size kit includes sample sizes of our jerseys and shorts to help you determine the best fit for each team member.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordionItem__toggle" onclick="toggleAccordion(this)">
+              <h2 class="guidelines__itemTitle">Ordering and Shipping</h2>
+              <button class="accordion-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">How do I finalize my order?</h3>
+              <p class="accordionContent__text">Once the design and sizing are approved, we will send you a final order summary for review. After you confirm the details, we will proceed with production.</p>
+
+              <h3 class="accordionContent__title">Do you offer international shipping for custom orders?</h3>
+              <p class="accordionContent__text">Yes, we ship internationally. Shipping costs and delivery times will vary based on your location.</p>
+
+              <h3 class="accordionContent__title">How can I track my custom order?</h3>
+              <p class="accordionContent__text">After your order is shipped, you will receive a confirmation email with tracking information to monitor the delivery status.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordionItem__toggle" onclick="toggleAccordion(this)">
+              <h2 class="guidelines__itemTitle">Returns and Exchanges</h2>
+              <button class="accordion-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">What is your return policy for custom orders?</h3>
+              <p class="accordionContent__text">Custom orders are not eligible for returns or exchanges unless there is a defect in the product. We ensure all custom gear meets our high standards before it reaches you.</p>
+
+              <h3 class="accordionContent__title">What if there is a defect in my custom apparel?</h3>
+              <p class="accordionContent__text">If you receive a defective item, please contact our customer service team immediately. We will work with you to resolve the issue and ensure you receive a replacement.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordionItem__toggle" onclick="toggleAccordion(this)">
+              <h2 class="guidelines__itemTitle">Additional Information</h2>
+              <button class="accordion-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">Do you offer bulk order discounts?</h3>
+              <p class="accordionContent__text">Yes, we offer discounts for bulk orders. Please contact our customer service team for more information on pricing and discounts.</p>
+
+              <h3 class="accordionContent__title">Can I reorder the same design in the future?</h3>
+              <p class="accordionContent__text">Yes, we keep your design on file for easy reordering. Simply contact us with your previous order details to place a new order.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordionItem__toggle" onclick="toggleAccordion(this)">
+              <h2 class="guidelines__itemTitle">Join the Cake Community</h2>
+              <button class="accordion-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M4.17636 11.1763C4.64518 10.7076 5.28095 10.4443 5.94386 10.4443C6.60677 10.4443 7.24254 10.7076 7.71136 11.1763L20.0864 23.5513L32.4614 11.1763C32.9329 10.7209 33.5644 10.4689 34.2199 10.4746C34.8754 10.4803 35.5024 10.7432 35.9659 11.2068C36.4294 11.6703 36.6924 12.2973 36.698 12.9528C36.7037 13.6083 36.4518 14.2398 35.9964 14.7113L21.8539 28.8538C21.385 29.3225 20.7493 29.5858 20.0864 29.5858C19.4235 29.5858 18.7877 29.3225 18.3189 28.8538L4.17636 14.7113C3.70769 14.2425 3.4444 13.6067 3.4444 12.9438C3.4444 12.2809 3.70769 11.6451 4.17636 11.1763Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <h3 class="accordionContent__title">How can I stay updated on new products and promotions?</h3>
+              <p class="accordionContent__text">Follow us on social media and sign up for our newsletter to stay informed about new collections, promotions, and events.</p>
+
+              <h3 class="accordionContent__title">Can I share my Cake Make experience on social media?</h3>
+              <p class="accordionContent__text">Absolutely! We love seeing our customers in action. Tag us @cake.teamspirit and use the hashtag #caketeamspirit to share your story.</p>
+            </div>
+          </div>
+
+          <h2 class="accordion__bottomText">If you have more questions or need further assistance, feel free to contact us. We're here to help!</h2>
+
+        </div>
+</section>
+
+{% section 'contactCta' %}
+
+{% section 'contactUs' %}
+
+{% section 'footer' %}
+
+<script>
+  function toggleAccordion(header) {
+    const content = header.nextElementSibling;
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      const activeContents = document.querySelectorAll('.accordion-content');
+      activeContents.forEach(item => item.style.maxHeight = null);
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  }
+</script>
