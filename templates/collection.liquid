@@ -1,19 +1,116 @@
-{% comment %}
-  This is a customized collection template
-{% endcomment %}
+<style>
+  /* GLOBAL */
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
 
-{% comment %} {% section 'collection-header' %} {% endcomment %}
+  body {
+    position: relative;
+  }
 
-<div class="collection-products">
-  {% for product in collection.products %}
-    <div class="product-item">
-      <a href="{{ product.url }}">
-        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-        <h2>{{ product.title }}</h2>
-        <p>{{ product.price | money }}</p>
-      </a>
+  /* MAIN */
+  .main {
+    margin-top: 104px;
+    padding: 150px 0;
+  }
+
+  .main h1 {
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0 0 100px;
+  }
+
+  .main__products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .main__productTitle {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    margin: 0;
+  }
+
+  .main__productItem {
+    border-radius: 10px;
+    border: 2px solid #737373;
+    background: #171717;
+    backdrop-filter: blur(36px);
+    overflow: hidden;
+  }
+
+  .main__productItem a {
+    text-decoration: none;
+  }
+
+  .main__productItem img {
+    width: 100%;
+  }
+
+  .main__productInfo {
+    display: flex;
+    gap: 36px;
+    padding: 20px;
+  }
+
+  .main__productInfo span {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    opacity: .8;
+  }
+
+  .main__line {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    z-index: -1;
+  }
+</style>
+
+{% section 'header' %}
+
+<section class="main">
+
+  <svg class="main__line" xmlns="http://www.w3.org/2000/svg" width="650" height="788" viewBox="0 0 650 788" fill="none">
+    <path d="M-37.2246 763.285C-1130.06 914.978 1968.4 7.47828 -70.8727 8.39363" stroke="#0038FF" stroke-width="15"/>
+  </svg>
+
+  <div class="container">
+
+    <h1 class="main__title">{{ collection.title }}</h1>
+
+    <div class="main__products">
+      {% for product in collection.products %}
+        <div class="main__productItem">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+            <div class="main__productInfo">
+              <span>product</span>
+              <h2 class="main__productTitle">{{ product.title }}</h2>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-</div>
+  </div>
+</section>
 
-{% comment %} {% section 'collection-footer' %} {% endcomment %}
+{% section 'contactCta' %}
+
+{% section 'contactUs' %}
+
+{% section 'footer' %}
