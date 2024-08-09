@@ -4,10 +4,20 @@
     margin: 0 auto 150px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 
-  .contact-cta h3 {
+  .contact-cta h2 {
     white-space: nowrap;
+    margin-bottom: 20px;
+  }
+
+  .contact-cta p {
+    margin: 40px 0 0;
+  }
+
+  .contact-cta h2:first-child {
+    margin-bottom: 20px;
   }
 
   .contact-cta__button {
@@ -46,7 +56,8 @@
 <section class="contact-cta">
   <div class="contact-cta__container">
     <div>
-      <h3>Make your<br>own jersey</h3>
+      <h2 class="heading-l">Make your</h2>
+      <h2 class="heading-l">own jersey</h2>
       <p>Create designs that reflect your team's unique identity.</p>
     </div>
     <a class="contact-cta__button">

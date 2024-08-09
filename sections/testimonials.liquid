@@ -89,6 +89,14 @@
     z-index: -1;
   }
 
+  .home-testimonials__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* MEDIA QUERIES */
+
   @media screen and (max-width: 1024px) {
     .home__testimonials {
       padding-bottom: 50px;
@@ -139,8 +147,10 @@
 
 <section class="home__testimonials">
   <div class="home__testimonials_container">
-    <h2>Shoutout from</h2>
-    <h2>the Teams</h2>
+      <div class="home-testimonials__titles">
+        <h2 class="heading-l">Shoutout from</h2>
+        <h2 class="heading-l">the Teams</h2>
+      </div>
     <div class="home__testimonials_topRow">
       <img class="home__testimonials_img1" src="{{ home__testimonials_img1_url }}" />
       <h3>Team<br/>Anabia</h3>

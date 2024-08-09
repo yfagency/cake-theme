@@ -42,8 +42,6 @@
   }
 
   .home__cakeMake h2 {
-    color: #fff;
-    font-size: 112px;
     text-transform: capitalize;
   }
 
@@ -150,98 +148,34 @@
   }
 </style>
 
+{% comment %} {% assign home__cakeMake_gypsyJersey_url = images['gypsy-cafe-jersey.png'] | image_url: width: 700 %}
+{% assign home__cakeMake_alkemJersey_url = images['jersey-alkem.png'] | image_url: width: 700 %}
+{% assign home__cakeMake_squadJersey_url = images['jersey-squad.png'] | image_url: width: 700 %} {% endcomment %}
+
+{% assign slideTitle = "
+Tailored Designs;
+Superior Craftsmanship;
+Full Customization
+" | split: ';' %}
+
+{% assign slideDescription = "
+Bold, vibrant, and uniquely yours — our designs capture your team's essence.;
+High-performance materials ensure comfort and durability on every ride.;
+From concept to creation, we bring your vision to life with meticulous attention to detail.
+" | split: ';' %}
+
+{% assign slideImg = "
+https://cdn.shopify.com/s/files/1/0751/1490/5880/files/gypsy-cafe-jersey.png;
+https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-alkem.png;
+https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-squad.png
+" | split: ';' %}
+
 <section class="home__cakeMake">
   <div class="home__cakeMake_container">
-    <h2>cake make</h2>
-    {% comment %} SWIPER TEST {% endcomment %}
-<style>
-  .swiper {
-  width: 1140px;
-}
-</style>
-<!-- Slider main container -->
+    <h2 class="heading-l">cake make</h2>
+    
+    {% include 'slider', titles: slideTitle, descriptions: slideDescription, imgs: slideImg %}
 
-{% assign home__cakeMake_gypsyJersey_url = images['gypsy-cafe-jersey.png'] | image_url: width: 700 %}
-{% assign home__cakeMake_alkemJersey_url = images['jersey-alkem.png'] | image_url: width: 700 %}
-{% assign home__cakeMake_squadJersey_url = images['jersey-squad.png'] | image_url: width: 700 %}
-
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">
-      <div class="embla__slide">
-        <div>
-          <h3>Tailored Designs</h3>
-        <p>Bold, vibrant, and uniquely yours — our designs capture your team's essence.</p>
-        <div class="home__cakeMake_buttons">
-          {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
-          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
-        </div>
-        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
-        </div>
-        <div class="embla__slide_imgBox">
-          <img src="{{ home__cakeMake_gypsyJersey_url }}" alt="Gypsy Jersey" class="home__cakeMake_jersey">
-        </div>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="embla__slide">
-        <div>
-          <h3>Superior Craftsmanship</h3>
-        <p>High-performance materials ensure comfort and durability on every ride.</p>
-        <div class="home__cakeMake_buttons">
-          {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
-          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
-        </div>
-        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
-        </div>
-        <div class="embla__slide_imgBox">
-          <img src="{{ home__cakeMake_alkemJersey_url }}" alt="Alkem Jersey" class="home__cakeMake_jersey" />
-        </div>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="embla__slide">
-        <div>
-          <h3>Full Customization</h3>
-        <p>From concept to creation, we bring your vision to life with meticulous attention to detail.</p>
-        <div class="home__cakeMake_buttons">
-          {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
-          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
-        </div>
-        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
-        </div>
-        <div class="embla__slide_imgBox">
-          <img src="{{ home__cakeMake_squadJersey_url }}" alt="Squad Jersey" class="home__cakeMake_jersey" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-</div>
-
-<script>
-  const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  autoplay: {
-    delay: 5000,
-  },
-
-});
-</script>
-
-{% comment %} SWIPER TEST {% endcomment %}
   </div>
   
 <img class="cakeMake__circleText rotating" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/circleText_big.svg?v=1720418502" />

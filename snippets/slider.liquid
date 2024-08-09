@@ -1,0 +1,79 @@
+{% comment %}
+
+INSTRUCTIONS
+
+### Call it like this ###
+{% include 'slider', titles: slideTitle, descriptions: slideDescription, imgs: slideImg %}
+
+### Populate the data like this (3 slides max!!!) ###
+{% assign slideTitle = "
+Tailored Designs;
+Superior Craftsmanship;
+Full Customization
+" | split: ';' %}
+
+{% assign slideDescription = "
+Bold, vibrant, and uniquely yours — our designs capture your team's essence.;
+High-performance materials ensure comfort and durability on every ride.;
+From concept to creation, we bring your vision to life with meticulous attention to detail.
+" | split: ';' %}
+
+{% assign slideImg = "
+https://cdn.shopify.com/s/files/1/0751/1490/5880/files/gypsy-cafe-jersey.png;
+https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-alkem.png;
+https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-squad.png
+" | split: ';' %}
+ 
+{% endcomment %}
+
+<style>
+  .swiper {
+  width: 1140px;
+}
+</style>
+
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {% for title in titles %}
+    <div class="swiper-slide">
+      <div class="embla__slide">
+        <div>
+          <h3>{{ title }}</h3>
+          <p>{{ descriptions[forloop.index0] }}</p>
+        <div class="home__cakeMake_buttons">
+          {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
+          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
+        </div>
+        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+        </div>
+        <div class="embla__slide_imgBox">
+          <img src="{{ imgs[forloop.index0] }}" alt="{{ slide1_alt_text }}" class="home__cakeMake_jersey">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+</div>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  autoplay: {
+    delay: 5000,
+  },
+
+});
+</script>
