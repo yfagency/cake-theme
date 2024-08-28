@@ -3,19 +3,33 @@
     padding: 150px 0;
   }
 
+  footer h4 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
   .footer__container {
     max-width: 1160px;
     margin: 0 auto;
+    text-align: right;
   }
 
   .footer__container_inner {
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
     justify-content: space-between;
+    text-align: left;
+    gap: 20px;
   }
 
   .footer__container_inner > img {
-    max-width: 15%;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
   }
 
   .footer__columns {
@@ -26,6 +40,12 @@
   .footer__right > div {
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    box-sizing: border-box;
   }
 
   .footer__columns > div {
@@ -57,31 +77,11 @@
     line-height: 1;
   }
 
-  @media screen and (max-width: 1024px) {
-    .footer__container_inner {
-      flex-direction: column;
-    }
-
-    .footer__container {
-      padding: 20px;
-    }
-
-    .footer__columns {
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .footer__right_bottom {
-      flex-direction: column;
-      align-items: baseline;
-      gap: 24px;
-      margin-bottom: 40px;
-    }
-
-    .footer__right_bottom > div {
-      display: flex;
-      gap: 16px;
-    }
+  .footer__copyright {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 </style>
 <footer>
@@ -122,19 +122,17 @@
             <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/logos_paypal.svg?v=1717381099" />
           </div>
           <div>
-            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/bxl_facebook.svg?v=1717381227" />
-            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/simple-icons_x.svg?v=1717381227" />
-            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/iconoir_instagram.svg?v=1717381228" />
-            <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/mdi_youtube.svg?v=1717381227" />
+            <a><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/bxl_facebook.svg?v=1717381227" /></a>
+            <a><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/simple-icons_x.svg?v=1717381227" /></a>
+            <a href="https://www.instagram.com/cake.teamspirit" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/iconoir_instagram.svg?v=1717381228" /></a>
+            <a><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/mdi_youtube.svg?v=1717381227" /></a>
           </div>
         </div>
         </div>
-        <p><span id="currentYear"></span>. The Cake Team Spirit.</p>
-        <script>
-          const currentYear = new Date().getFullYear();
-          document.getElementById('currentYear').textContent = currentYear;
-        </script>
       </div>
+    </div>
+    <div>
+      <p class="footer__copyright">All Rights Reserved.</p>
     </div>
   </div>
 </footer>

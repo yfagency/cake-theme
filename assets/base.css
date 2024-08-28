@@ -11,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #fff;
   overflow-x: hidden;
+  text-wrap: pretty;
 }
 
 .lazyload {
@@ -37,11 +38,32 @@ a {
   line-height: inherit;
 }
 
-h1 {
+.heading-xl {
   font-size: 110px;
   font-weight: 800;
-  margin: 24px 0;
   font-family: Unbounded, sans-serif;
+  margin: 0;
+}
+
+.heading-l {
+  font-size: 70px;
+  font-weight: 800;
+  font-family: Unbounded, sans-serif;
+  margin: 0;
+}
+
+.heading-m {
+  font-size: 45px;
+  font-weight: 800;
+  font-family: Unbounded, sans-serif;
+  margin: 0;
+}
+
+.card__title {
+  font-family: Unbounded;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px; /* 200% */
 }
 
 h2 {
@@ -58,63 +80,6 @@ h3 {
   margin: 24px 0;
   font-family: Unbounded, sans-serif;
   text-transform: capitalize;
-}
-
-/* HERO */
-.home__hero {
-  color: #fff;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.hero__buttons {
-  margin-top: 72px;
-  display: flex;
-  gap: 24px;
-}
-
-.hero__container {
-  max-width: 1160px;
-  width: 100%;
-  min-height: 500px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.hero__container > div:first-child {
-  z-index: 2;
-}
-
-.hero__container div:nth-child(2) {
-  align-items: center;
-  display: flex;
-}
-
-.hero__jersey {
-  position: absolute;
-  right: 0;
-  height: 125%;
-  max-height: 700px;
-  z-index: 0;
-}
-
-.hero__circleText_1 {
-  position: absolute;
-  left: 50%;
-  bottom: 30%;
-  width: 280px;
-  z-index: 1;
-}
-
-.hero__circleText_2 {
-  position: absolute;
-  right: -5%;
-  bottom: 50%;
-  width: 280px;
-  z-index: -1;
 }
 
 @keyframes rotating {

@@ -13,6 +13,11 @@
     white-space: nowrap;
   }
 
+  .home__testimonials_container h2:not(:first-child) {
+    padding-left: 20vw;
+    white-space: nowrap;
+  }
+
   .home__testimonials_topRow {
     margin-top: 72px;
     display: flex;
@@ -24,12 +29,6 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     width: 60%;
-  }
-
-  .home__testimonials_topRow h3 {
-    font-size: 48px;
-    line-height: 1;
-    margin: 0;
   }
 
   .home__testimonials_bottomRow {
@@ -84,54 +83,18 @@
 
   .home__testimonials_blueLine {
     position: absolute;
-    top: -20%;
-    right: 0;
+    top: -32%;
+    right: -11%;
     z-index: -1;
+    width: 856.807px;
+    height: 1083.675px;
+    flex-shrink: 0;
   }
 
-  @media screen and (max-width: 1024px) {
-    .home__testimonials {
-      padding-bottom: 50px;
-    }
-
-    .home__testimonials_container {
-      padding: 20px;
-    }
-
-    .home__testimonials h2 {
-      font-size: 48px;
-      padding-left: 0 !important;
-      line-height: 1;
-    }
-
-    .home__testimonials_topRow {
-      flex-direction: column;
-      align-items: start;
-      gap: 0;
-    }
-
-    .home__testimonials_topRow img {
-      width: 100%;
-      margin-bottom: -5%;
-      margin-left: 10%;
-    }
-    
-    .home__testimonials_bottomRow div:first-child {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .home__testimonials_bottomRow div:first-child img {
-      padding: 0;
-      width: 100%;
-      margin-left: -10%;
-    }
-
-    .home__testimonials_bottomRow div:nth-child(2) {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-    }
+  .home-testimonials__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 </style>
 
@@ -139,11 +102,13 @@
 
 <section class="home__testimonials">
   <div class="home__testimonials_container">
-    <h2>Shoutout from</h2>
-    <h2>the Teams</h2>
+      <div class="home-testimonials__titles">
+        <h2 class="heading-l">Shoutout</h2>
+        <h2 class="heading-l">from Teams</h2>
+      </div>
     <div class="home__testimonials_topRow">
       <img class="home__testimonials_img1" src="{{ home__testimonials_img1_url }}" />
-      <h3>Team<br/>Anabia</h3>
+      <h3 class="heading-m">Team<br/>Anabia</h3>
     </div>
     <div class="home__testimonials_bottomRow">
       <div>
@@ -162,5 +127,7 @@
       </div>
     </div>
   </div>
-  <img class="home__testimonials_blueLine" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/testimonials_line.svg?v=1717662128" />
+  <svg class="home__testimonials_blueLine" xmlns="http://www.w3.org/2000/svg" width="580" height="1100" viewBox="0 0 580 1100" fill="none">
+    <path d="M606.306 80.6016C1745.31 -378.899 -1380.69 1513.1 805.804 1003.87" stroke="#0038FF" stroke-width="15"/>
+  </svg>
 </section>

@@ -6,14 +6,11 @@
     z-index: 9999;
     background: transparent;
     transition: .3s;
-    font-size: 20px;
-    line-height: 1.5;
   }
 
   .header__container {
     max-width: 1160px;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +20,14 @@
   .header_links {
     display: flex;
     justify-content: end;
-    gap: 24px;
+    gap: 8px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .header_links a:first-child {
+    color: rgba(255, 255, 255, 0.40);
+    letter-spacing: 0.6px;
   }
 
   .header__container img {
@@ -33,18 +37,11 @@
 
   .header {
     text-transform: capitalize;
-  }
-
-  .header__container nav {
-    gap: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: rgba(29, 28, 28, 0.40);
+    backdrop-filter: blur(12px);
   }
 
   .headerScrolled {
-    background: rgba(29, 28, 28, 0.40);
-    backdrop-filter: blur(12px);
     transition: .3s;
   }
 
@@ -56,6 +53,12 @@
   .header nav a {
     color: inherit;
     text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: capitalize;
   }
 
   .header__highlightedLink {
@@ -72,6 +75,37 @@
     transition: .2s linear;
   }
 
+  .header__nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    text-wrap: nowrap;
+    align-items: center;
+    padding: 0;
+  }
+
+  .header__navCta {
+    font-style: normal;
+    font-weight: 700;
+    display: inline-flex;
+    font-size: 20px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .header__navCta:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  /* MEDIA QUERIES */
+
   @media screen and (max-width: 1024px) {
     .header {
       display: none;
@@ -80,16 +114,34 @@
 </style>
 <header id="header" class="header">
   <div class="header__container">
-    <img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cake_logo.svg" />
-    <nav>
-      <a>get started</a>
-      <a>about us</a>
-      <a href="#home__contact">contact us</a>
-      <a>FAQ</a>
-      <a class="header__highlightedLink">Make jersey</a>
+    <a href="{{ routes.root_url }}"><img src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/cake_logo.svg" /></a>
+    
+    <nav class="header__nav">
+      {% assign menu = linklists['main-menu'] %}
+
+      <ul>
+        {% for item in menu.links %}
+          <li>
+            <a href="{{ item.url }}">{{ item.title }}</a>
+            {% if item.links.size > 0 %}
+              <ul>
+                {% for sub_item in item.links %}
+                  <li>
+                    <a href="{{ sub_item.url }}">{{ sub_item.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </nav>
+
+    <a href="/pages/get-started" class="header__navCta">Make Jersey</a>
+
     <div class="header_links">
-      <a>日本語</a>
+      <a>EN</a>
+      <a>JP</a>
     </div>
   </div>
 </header>
