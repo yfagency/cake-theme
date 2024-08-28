@@ -39,17 +39,31 @@ a {
 }
 
 .heading-xl {
-  font-size: 104px;
+  font-size: 110px;
   font-weight: 800;
   font-family: Unbounded, sans-serif;
   margin: 0;
 }
 
 .heading-l {
-  font-size: 72px;
+  font-size: 70px;
   font-weight: 800;
   font-family: Unbounded, sans-serif;
   margin: 0;
+}
+
+.heading-m {
+  font-size: 45px;
+  font-weight: 800;
+  font-family: Unbounded, sans-serif;
+  margin: 0;
+}
+
+.card__title {
+  font-family: Unbounded;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px; /* 200% */
 }
 
 h2 {

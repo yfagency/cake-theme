@@ -40,13 +40,18 @@ https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-squad.png
     <div class="swiper-slide">
       <div class="embla__slide">
         <div>
-          <h3>{{ title }}</h3>
-          <p>{{ descriptions[forloop.index0] }}</p>
-        <div class="home__cakeMake_buttons">
-          {% include 'button', btn_class: 'primary', btn_text: 'Make Jersey' %}
-          {% include 'button', btn_class: 'secondary', btn_text: 'Learn More' %}
-        </div>
-        <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+          <div>
+            <img class="home__cakeMake_arrow" src="https://cdn.shopify.com/s/files/1/0751/1490/5880/files/Arrow.svg?v=1717133953" />
+            <h3 class="heading-m">{{ title }}</h3>
+            <div></div>
+            <div>
+              <p>{{ descriptions[forloop.index0] }}</p>
+              <div class="home__cakeMake_buttons">
+                {% include 'button', href: "/pages/get-started", btn_class: 'primary', btn_text: 'Make Jersey' %}
+                {% include 'button', href: "#home__contact", btn_class: 'secondary', btn_text: 'Learn More' %}
+              </div>
+            </div>
+          </div>
         </div>
         <div class="embla__slide_imgBox">
           <img src="{{ imgs[forloop.index0] }}" alt="{{ slide1_alt_text }}" class="home__cakeMake_jersey">

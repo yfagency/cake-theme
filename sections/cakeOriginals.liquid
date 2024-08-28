@@ -1,11 +1,17 @@
 <style>
   .home__cakeOriginals {
-    padding: 150px 0;
+    padding: 150px 0 0;
   }
 
   .home__cakeOriginals_container {
     max-width: 1160px;
     margin: 0 auto;
+  }
+
+  .home__cakeOriginals_headingsBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .home__cakeOriginals_headingsBox h2 {
@@ -48,41 +54,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-
-  @media screen and (max-width: 1024px) {
-    .home__cakeOriginals {
-      padding: 50px 0;
-    }
-
-    .home__cakeOriginals h2 {
-      font-size: 40px;
-    }
-
-    .home__cakeOriginals .swiper {
-      width: 100%;
-    }
-
-    .home__cakeOriginals .swiper-slide {
-      height: auto;
-      align-self: stretch;
-    }
-
-    .home__cakeOriginals_contentBox img {
-      aspect-ratio: auto;
-      height: 100%;
-    }
-
-    .home__cakeOriginals_headingsBox {
-      padding: 0 20px;
-    }
-
-    .home__cakeOriginals h2 {
-      padding-left: 0 !important;
-      font-size: 48px;
-      margin: 0;
-      line-height: 1.25;
-    }
+    align-items: center;
+    padding: 90px 0;
   }
 </style>
 
@@ -110,8 +83,8 @@
   </style>
   <div class="home__cakeOriginals_container">
     <div class="home__cakeOriginals_headingsBox">
-      <h2>Explore our</h2>
-      <h2>original collection</h2>
+      <h2 class="heading-l">Explore</h2>
+      <h2 class="heading-l">ready-made jersey</h2>
     </div>
     <div class="home__cakeOriginals_contentBox">
       <div class="swiper">

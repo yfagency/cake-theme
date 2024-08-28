@@ -27,9 +27,7 @@
 }
 
 .home__teamCollection_item h3 {
-  font-size: 24px;
   font-weight: 700;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .home__teamCollection_cta {
@@ -60,7 +58,7 @@
 
 .home__teamCollection_line {
   position: absolute;
-  bottom: 0;
+  top: -75px;
   z-index: -1;
 }
 
@@ -91,45 +89,6 @@
   opacity: .8;
   letter-spacing: 0.7px;
 }
-
-@media screen and (max-width: 1024px) {
-  .home__teamCollection_grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .home__teamCollection h2 {
-    font-size: 48px;
-  }
-
-  .home__teamCollection_container {
-    padding: 20px;
-    margin: 50px auto;
-  }
-
-  .home__teamCollection_item {
-    box-sizing: border-box;
-  }
-
-  .home__teamCollection_grid > div {
-    padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 100%;
-  }
-
-  .home__teamCollection_cta {
-    aspect-ratio: 1/1;
-  }
-
-  .home__teamCollection_cta a {
-    border-radius: 8px;
-    font-weight: 500;
-    width: 100%;
-    height: 100%;
-    letter-spacing: 0;
-  }
-}
 </style>
 
 <section class="home__teamCollection">
@@ -153,7 +112,7 @@
           {% endif %}
           <div class="home__teamCollection_itemText">
             <span>Team</span>
-            <h3>{{ collection.title | capitalize }}</h3>
+            <h3 class="card__title">{{ collection.title | capitalize }}</h3>
           </div>
         </a>
       </div>
