@@ -28,8 +28,62 @@ https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-squad.png
 
 <style>
   .swiper {
-  width: 1140px;
-}
+    width: 1140px;
+  }
+
+  /* Laptop */
+  @media screen and (max-width: 1024px) {
+    .home__cakeMake_arrow {
+      display: none;
+    }
+
+    .embla__slide {
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    .swiper {
+      width: 100vw;
+    }
+
+    .home__cakeMake_buttons {
+      gap: 24px;
+      margin-top: 40px;
+      justify-content: center;
+    }
+
+    .swiper-pagination {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 80px;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    .home__cakeMake_jersey {
+      width: 100%;
+    }
+
+    .embla__slide h3 {
+      font-size: 6vw;
+    }
+
+    .embla__slide > div:first-child > div:first-child {
+      column-gap: 0;
+    }
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-pagination {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+  }
 </style>
 
 <div class="swiper">
@@ -74,11 +128,7 @@ https://cdn.shopify.com/s/files/1/0751/1490/5880/files/jersey-squad.png
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-  },
-
-  autoplay: {
-    delay: 5000,
-  },
+  }
 
 });
 </script>

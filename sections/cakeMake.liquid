@@ -86,6 +86,40 @@
     left: -200px;
     height: 400px;
   }
+
+  /* Laptop */
+  @media screen and (max-width: 1024px) {
+    .home__cakeMake_container {
+      padding: 100px 20px;
+      margin: 0;
+    }
+
+    .home__cakeMake h2 {
+      font-size: 6vw;
+      margin-bottom: 40px;
+    }
+
+    .cakeMake__circleText {
+      top: 10%;
+      right: -200px;
+      left: auto;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    .home__cakeMake h2 {
+      font-size: 10vw;
+      margin-bottom: 40px;
+    }
+
+    .cakeMake__circleText {
+      top: 15%;
+      right: -150px;
+      left: auto;
+      width: 300px;
+    }
+  }
 </style>
 
 {% comment %} {% assign home__cakeMake_gypsyJersey_url = images['gypsy-cafe-jersey.png'] | image_url: width: 700 %}

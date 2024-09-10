@@ -3,6 +3,7 @@
   .container {
     max-width: 1160px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   body {
@@ -27,7 +28,7 @@
 
   .main__products {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
   }
 
@@ -54,6 +55,8 @@
 
   .main__productItem img {
     width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
   }
 
   .main__productInfo {
@@ -78,6 +81,18 @@
     top: 8%;
     left: 0;
     z-index: -1;
+  }
+
+  @media (orientation: portrait) {
+    .main__products {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .main__productInfo {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 </style>
 

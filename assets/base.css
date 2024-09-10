@@ -46,14 +46,14 @@ a {
 }
 
 .heading-l {
-  font-size: 70px;
+  font-size: clamp( 40px, 5vw, 70px);
   font-weight: 800;
   font-family: Unbounded, sans-serif;
   margin: 0;
 }
 
 .heading-m {
-  font-size: 45px;
+  font-size: clamp( 24px, 4vw, 45px);
   font-weight: 800;
   font-family: Unbounded, sans-serif;
   margin: 0;
@@ -124,40 +124,4 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-/* MEDIA QUERIES */
-@media screen and (max-width: 1024px) {
-  /* HERO */
-  .home__hero {
-    min-height: 100%;
-    padding: 20px;
-  }
-
-  .hero__container {
-    flex-direction: column-reverse;
-  }
-
-  .hero__jersey {
-    position: relative;
-    max-width: 100%;
-  }
-
-  .home__hero h1 {
-    font-size: 48px;
-  }
-
-  .home__hero p {
-    max-width: 100%;
-    font-size: 20px;
-  }
-
-  .home__hero_socialMedia {
-    display: none;
-  }
-
-  .hero__container div:first-child {
-    margin-top: -10%;
-  }
-
 }

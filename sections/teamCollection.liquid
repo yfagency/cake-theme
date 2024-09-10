@@ -5,14 +5,15 @@
 
 .home__teamCollection_container {
   max-width: 1160px;
-  margin: 150px auto;
+  margin: 0 auto;
+  padding: 100px 20px;
 }
 
 .home__teamCollection_grid {
   margin-top: 72px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .home__teamCollection_grid a {
@@ -58,7 +59,8 @@
 
 .home__teamCollection_line {
   position: absolute;
-  top: -75px;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
@@ -88,6 +90,50 @@
   font-size: 14px;
   opacity: .8;
   letter-spacing: 0.7px;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .home__teamCollection_container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+
+  .home__teamCollection_grid {
+    display: flex;
+    overflow-x: scroll;
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+
+  .home__teamCollection_itemText {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .home__teamCollection_cta a {
+    aspect-ratio: 1/1;
+    height: auto;
+    width: 200px;
+  }
+
+  .card__title {
+    font-size: 16px;
+  }
+
+  .home__teamCollection_item h3 {
+    line-height: 1.5;
+  }
+
+  .home__teamCollection_item {
+    min-width: 300px;
+  }
+
+  .home__teamCollection_line {
+    width: 125%;
+  }
 }
 </style>
 
