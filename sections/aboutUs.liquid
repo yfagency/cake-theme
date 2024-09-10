@@ -45,13 +45,19 @@
     gap: 20px;
   }
 
+  /* Laptop */
   @media screen and (max-width: 1024px) {
+    .home__aboutUs {
+      padding: 100px 20px;
+    }
+  
     .aboutUs__container {
-      padding: 20px;
+      padding: 0;
+      align-items: flex-start;
     }
 
     .home__aboutUs h2 {
-      font-size: 48px;
+      font-size: 5vw;
     }
 
     .home__aboutUs h2,
@@ -64,7 +70,14 @@
     }
 
     .home__aboutUs a {
-      margin-left: 0;
+      margin: 40px 0 0;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    .home__aboutUs h2 {
+      font-size: 8vw;
     }
   }
 </style>

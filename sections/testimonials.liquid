@@ -2,6 +2,7 @@
   .home__testimonials_container {
     max-width: 1160px;
     margin: 0 auto;
+    padding: 100px 20px;
   }
 
   .home__testimonials_container h2 {
@@ -96,6 +97,84 @@
     flex-direction: column;
     gap: 20px;
   }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    .home__testimonials {
+      padding-bottom: 0;
+    }
+
+    .home__testimonials_container {
+      padding: 50px 20px;
+    }
+
+    .home__testimonials_container h2:first-child,
+    .home__testimonials_container h2:nth-child(2) {
+      padding: 0;
+    }
+
+    .home__testimonials_topRow {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .home__testimonials_topRow br {
+      display: none;
+    }
+
+    .home__testimonials_topRow img {
+      aspect-ratio: unset;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .home__testimonials_bottomRow > div {
+      gap: 0;
+      flex-direction: column;
+    }
+
+    .home__testimonials_img2 {
+      padding: 0;
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      height: auto;
+    }
+
+    .home__testimonials_bottomRow > div:nth-child(2) {
+      padding-left: 0;
+    }
+
+    .home__testimonials_img3 {
+      width: 100%;
+      margin-right: 0;
+      right: -10%;
+      position: relative;
+    }
+
+    .home__testimonials_img4 img {
+      margin-top: 0;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      height: auto;
+      top: -50px;
+      left: -10%;
+      position: relative;
+    }
+
+    .home__testimonials_blueLine {
+      position: absolute;
+      top: -32%;
+      right: -11%;
+      z-index: -1;
+      width: 100%;
+      height: 1083.675px;
+      flex-shrink: 0;
+    }
+  }
 </style>
 
 {% assign home__testimonials_img1_url = images['b7646d6f3df338c08debe74099700cae.jpg'] | image_url: width: 700 %}
@@ -108,7 +187,7 @@
       </div>
     <div class="home__testimonials_topRow">
       <img class="home__testimonials_img1" src="{{ home__testimonials_img1_url }}" />
-      <h3 class="heading-m">Team<br/>Anabia</h3>
+      <h3 class="heading-m">Team <br/>Anabia</h3>
     </div>
     <div class="home__testimonials_bottomRow">
       <div>

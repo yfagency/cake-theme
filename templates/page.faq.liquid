@@ -45,6 +45,24 @@
     top: 5%;
   }
 
+  @media screen and (max-width: 600px) {
+    .hero h1 {
+      font-size: 32px;
+    }
+
+    .hero p {
+      max-width: 100%;
+    }
+
+    .hero {
+      padding: 100px 20px;
+    }
+
+    .hero__arrow {
+      margin-top: 40px;
+    }
+  }
+
   /* ACCORDION */
   .accordion {
     width: 100%;
@@ -136,6 +154,30 @@
     max-width: 70%;
     margin: 0 auto;
     text-wrap: balance;
+  }
+
+  @media screen and (max-width: 600px) {
+    .accordion {
+      box-sizing: border-box;
+      padding: 0 20px 100px;
+    }
+
+    .guidelines__itemTitle {
+      font-size: 24px;
+    }
+
+    .accordionContent__title {
+      font-size: 24px;
+    }
+
+    .accordionContent__text {
+      max-width: 100%;
+    }
+
+    .accordion__bottomText {
+      font-size: 24px;
+      max-width: 100%;
+    }
   }
 </style>
 

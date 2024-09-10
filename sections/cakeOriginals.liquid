@@ -57,6 +57,40 @@
     align-items: center;
     padding: 90px 0;
   }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    .home__cakeOriginals {
+      padding: 100px 20px 0;
+    }
+
+    .home__cakeOriginals_headingsBox h2:nth-child(2) {
+      padding: 0;
+      white-space: inherit;
+    }
+
+    .home__cakeOriginals_headingsBox {
+      gap: 0;
+    }
+
+    .home__cakeOriginals_contentBox {
+      display: block;
+    }
+
+    .home__cakeOriginals .swiper {
+      width: 100% !important;
+    }
+
+    .swiper .swiper-slide {
+      aspect-ratio: 1/1;
+    }
+
+    .home__cakeOriginals_right {
+      text-align: center;
+      gap: 40px;
+      padding: 50px 0;
+    }
+  }
 </style>
 
 {% assign home__cakeOriginals_img1_url = images['cf1cb3453fef5a1ffff1b14d5ab4348a.jpg'] | image_url: width: 700 %}

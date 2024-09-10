@@ -1,5 +1,4 @@
 <style>
-  /* HERO */
   .home__hero {
     color: #fff;
     min-height: 100vh;
@@ -62,6 +61,52 @@
 
   .home__hero p {
     margin: 32px 0 0;
+  }
+
+  /* Laptop */
+  @media screen and (max-width: 1024px) {
+    .home__hero h1 {
+      font-size: 8vw;
+    }
+
+    .home__hero {
+      min-height: 100%;
+      padding: 100px 20px 50px;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    .home__hero h1 {
+      font-size: 10vw;
+    }
+
+    .hero__jersey {
+      position: relative;
+      width: 100%;
+    }
+
+    .hero__container {
+      margin: 104px auto 0;
+      flex-direction: column-reverse;
+    }
+
+    .hero__container p br {
+      display: none;
+    }
+
+    .home__hero_socialMedia {
+      display: none;
+    }
+
+    .hero__circleText_2 {
+      top: -5%;
+      right: -5%;
+    }
+
+    .hero__buttons {
+      gap: 10px;
+    }
   }
 </style>
 

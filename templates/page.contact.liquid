@@ -58,6 +58,33 @@
     right: 0;
     z-index: -1;
   }
+
+  @media screen and (max-width: 600px) {
+    .hero__info {
+      padding: 0 0;
+    }
+
+    .hero__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero__info iframe {
+      aspect-ratio: 1/1;
+    }
+
+    .hero__title {
+      font-size: 32px;
+    }
+
+    .hero__text {
+      max-width: 100%;
+    }
+
+    .container {
+      padding: 0 20px;
+    }
+  }
 </style>
 
 {% section 'header' %}

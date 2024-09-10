@@ -58,6 +58,23 @@
     height: 20px;
     width: auto;
   }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    .contact-cta__container {
+      max-width: 100%;
+      margin: 0 20px 150px;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .contact-cta__button {
+      margin: 0 auto;
+    }
+  }
 </style>
 
 <section class="contact-cta">

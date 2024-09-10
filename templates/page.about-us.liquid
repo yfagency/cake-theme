@@ -37,6 +37,20 @@
     z-index: -1;
   }
 
+  @media screen and (max-width: 600px) {
+    .hero {
+      padding: 100px 20px;
+    }
+
+    .hero__title {
+      font-size: 32px;
+    }
+
+    .hero__text {
+      max-width: 100%;
+    }
+  }
+
   /* ABOUT US */
   .aboutUs {
     padding: 150px 0;
@@ -62,6 +76,32 @@
     gap: 50px;
     grid-template-columns: auto 1fr;
     align-items: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .aboutUs {
+      padding: 100px 20px;
+    }
+
+    .aboutUs__title {
+      font-size: 24px;
+    }
+
+    .aboutUs__mission {
+      grid-template-columns: 1fr;
+    }
+
+    .whyUs h2 {
+      font-size: 32px;
+    }
+
+    .whyUs {
+      padding: 0 20px;
+    }
+
+    .home__cakeMake_container {
+      margin: 0 !important;
+    }
   }
 </style>
 
@@ -200,6 +240,41 @@
         width: 100% !important;
         opacity: 1 !important;
       }
+
+      @media screen and (max-width: 600px) {
+        .home__cakeMake_arrow {
+          display: none;
+        }
+
+        .embla__slide > div:first-child {
+          padding: 0;
+        }
+
+        .embla__slide {
+          flex: 0 0 100%;
+          min-width: 0;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+
+        .home__cakeMake_jersey {
+          width: 100%;
+        }
+
+        .swiper {
+          width: 100% !important;
+        }
+
+        .swiper-pagination {
+          position: relative;
+          margin-top: 50px;
+        }
+
+        .whyUs {
+          padding-bottom: 100px;
+        }
+      }
     </style>
     
     <section class="home__cakeMake">
@@ -280,9 +355,9 @@
         el: '.swiper-pagination',
       },
     
-      autoplay: {
-        delay: 5000,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      // },
     
     });
     </script>
