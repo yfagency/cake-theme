@@ -23,6 +23,10 @@
       position: relative;
     }
 
+    .hero a {
+      text-decoration: none;
+    }
+
     .hero__button {
       display: inline-block;
       padding: 16px 40px;
@@ -320,8 +324,7 @@
       }
     }
 
-    /* Mobile */
-    @media screen and (max-width: 600px) {
+    @media (max-width: 600px) {
       .getStarted__box h2 {
         font-size: 32px;
       }
@@ -345,8 +348,8 @@
   {% section 'header' %}
 
   <hero class="hero">
-    <h1 class="hero__title">Get Started<br />with Cake Make</h1>
-    <a class="hero__button">make jersey</a>
+    <h1 class="hero__title heading-xl">Get Started<br />with Cake Make</h1>
+    <a href="#getStarted" class="hero__button">make jersey</a>
     <svg xmlns="http://www.w3.org/2000/svg" width="826" height="624" viewBox="0 0 826 624" fill="none">
       <path d="M825 8.85299C360.774 -13.247 323.941 400.449 506.202 511.725C688.463 623 706.562 267.074 365.219 328.333C92.1449 377.341 13.2921 545.198 7.99997 623" stroke="#0038FF" stroke-width="15"/>
     </svg>
@@ -463,7 +466,7 @@
     </svg>
   </section>
 
-  <section class="getStarted">
+  <section id="getStarted" class="getStarted">
     <div class="container">
       <div class="getStarted__box">
         <div class="getStarted__elipse1"></div>

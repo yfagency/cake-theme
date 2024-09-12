@@ -39,7 +39,7 @@ a {
 }
 
 .heading-xl {
-  font-size: 110px;
+  font-size: clamp(24px, 6.875vw, 110px);
   font-weight: 800;
   font-family: Unbounded, sans-serif;
   margin: 0;
